@@ -74,8 +74,97 @@ obama.age_=(51)
 println("age: " + obama.age)	//调用的是方法
 ```
 
+## 鸭子类型
+
+使用类似
+```scala
+{ def close(): Unit }
+```
+作为参数类型定义。从而任何含有 close()函数的类都能作为参数传递，避免了继承的不够灵活的特性。
+
+```scala
+def withClose(closeAble: { def close(): Unit }, 
+    op: { def close(): Unit } => Unit) {
+    try {
+        op(closeAble)
+    } finally {
+        closeAble.close()
+    }
+}
+
+class Connection {
+    def close() = println("close Connection")
+}
+
+val conn: Connection = new Connection()
+withClose(conn, conn =>
+    println("do something with Connection"))
+```
+
+## Currying
+
+def add(x:Int, y:Int) = x + y
+是普通的函数
+
+def add(x:Int) = (y:Int) => x + y
+是柯里化后的函数，相当于返回一个匿名函数表达式。
+
+ def add(x:Int)(y:Int) = x + y
+是简化写法
+
+```scala
+def withClose(closeAble: { def close(): Unit })
+    (op: { def close(): Unit } => Unit) {
+    try {
+        op(closeAble)
+    } finally {
+        closeAble.close()
+    }
+}
+
+class Connection {
+    def close() = println("close Connection")
+}
+
+val conn: Connection = new Connection()
+withClose(conn)(conn =>
+    println("do something with Connection"))
+```
+
+## 泛型
+
+"123456"
+修改为
+
+123456
+虽然msg由String类型变为Int类型，但是由于使用了泛型，代码依旧可以正常运行。
+
+```scala
+def withClose[A <: { def close(): Unit }, B](closeAble: A)
+  (f: A => B): B =
+  try {
+    f(closeAble)
+  } finally {
+    closeAble.close()
+  }
+class Connection {
+  def close() = println("close Connection")
+}
+val conn: Connection = new Connection()
+val msg = withClose(conn) { conn =>
+  {
+    println("do something with Connection")
+    "123456"
+  }
+}
+
+println(msg)
+
+```
+
+Traits
 
 
 
-
+http://twitter.github.io/scala_school/zh_cn/basics.html
 http://zh.scala-tour.com/#/duck-type
