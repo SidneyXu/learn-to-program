@@ -1,8 +1,5 @@
 package com.mrseasons.stepintoscala;
 
-import java.io.*;
-import java.util.Scanner;
-
 /**
  * Created by mrseasons on 15-1-25.
  */
