@@ -4,7 +4,6 @@ import java.net.URL
 import java.nio.file.Paths
 import java.util.Scanner
 
-import org.junit.Test
 
 import scala.reflect.io.File
 
