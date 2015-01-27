@@ -3,7 +3,11 @@ package com.mrseasons.stepintoscala
 import java.net.URL
 import java.nio.file.Paths
 import java.util.Scanner
+<<<<<<< HEAD
 import org.junit.Test
+=======
+
+>>>>>>> 6cc0713649807ca98d599567466465e1047db666
 
 import scala.reflect.io.File
 
