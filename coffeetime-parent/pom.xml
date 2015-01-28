@@ -12,6 +12,7 @@
     <modules>
         <module>coffeetime-scala</module>
         <module>coffeetime-groovy</module>
+        <module>coffeetime-kotlin</module>
     </modules>
 
     <!--properties-->
