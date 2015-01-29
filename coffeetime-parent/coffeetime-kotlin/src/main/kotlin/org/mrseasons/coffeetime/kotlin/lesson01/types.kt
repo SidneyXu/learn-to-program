@@ -74,6 +74,27 @@ fun arr() {
     }
 }
 
+//String
+fun str() {
+    val str: String = "Hello, World"
+    for (c in str) {
+        println(c)
+    }
+
+    val strn = "Hello\nWorld"
+    println(strn)
+
+    val text = """
+for(c in str){
+    print(c) + "abc"
+}
+    """
+    println(text)
+
+    val i = 10
+    println("i==$i")    //i==10
+}
+
 fun main(args: Array<String>) {
-    arr()
+    str()
 }
