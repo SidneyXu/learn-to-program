@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.mrseasons.coffeetime.groovy.lesson06
 
 /**
@@ -27,17 +26,3 @@ class SongExample {
 
     }
 }
-=======
-package org.mrseasons.coffeetime.groovy.lesson06
-
-/**
- * Created by mrseasons on 1/30/15.
- */
-class SongExample {
-    static void main(args){
-        def sng = new Song(name:"Le Freak",
-                artist:"Chic", genre:"Disco")
-
-    }
-}
->>>>>>> 213870f000b360792a686ff1949b111205e5fd6e

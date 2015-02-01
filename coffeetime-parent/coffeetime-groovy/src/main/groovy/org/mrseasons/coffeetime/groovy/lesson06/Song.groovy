@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package org.mrseasons.coffeetime.groovy.lesson06
 
 /**
@@ -16,21 +15,9 @@ class Song {
     String getInfo(){
         "${name} and ${artist},${getGenre()}"
     }
-}
-=======
-package org.mrseasons.coffeetime.groovy.lesson06
-
-/**
- * Created by mrseasons on 1/30/15.
- */
-class Song {
-    def name
-    String artist
-    def genre
 
     @Override
     String toString() {
         return "${name}:${artist}"
     }
 }
->>>>>>> 213870f000b360792a686ff1949b111205e5fd6e

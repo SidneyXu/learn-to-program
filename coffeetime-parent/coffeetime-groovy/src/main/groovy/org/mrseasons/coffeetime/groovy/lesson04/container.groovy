@@ -29,12 +29,16 @@ def numbers = [1, 2, 3, 4, 3, 4]
 println numbers.join(",")   //1,2,3,4,3,4
 println numbers.count(3)    //2
 
+//index
+println list[-1..-2]
+
 //spread operator
 def numbers2 = numbers*.plus(10)
 println(numbers)            //[1, 2, 3, 4, 3, 4]
 println(numbers2)           //[11, 12, 13, 14, 13, 14]
 
 //---Map---
+def emptyMap=[:]
 def map = [name: "Peter", "age": 12, "national": "USA"]
 println map.getClass()      //class java.util.LinkedHashMap
 

@@ -15,3 +15,6 @@ int i = 1
 def j = 2
 println i.class    //class java.lang.Integer
 println j.class    //class java.lang.Integer
+
+
+
