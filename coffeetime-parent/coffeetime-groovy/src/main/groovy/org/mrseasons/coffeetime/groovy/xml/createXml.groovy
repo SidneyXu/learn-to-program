@@ -13,6 +13,38 @@ xml.langs(type:"current"){
 }
 println(sw)
 
+//jsonBuilder
+sw=new StringBuilder()
+def json=new groovy.json.JsonBuilder()
+json.call{
+    results{
+        result("x")
+        result("y")
+    }
+}
+println(json.toPrettyString())
+
+def list = [
+        [code: "111", value: "222"],
+        [code: "333", value: "444"]
+]
+def builder = new groovy.json.JsonBuilder(list)
+println builder.toString()
+
+def root=new groovy.json.JsonBuilder()
+root{
+    data(
+            list.collect{
+                [
+                        code:it.code,
+                        value: it.value
+                ]
+            }
+    )
+}
+println root.toString()
+
+
 //StreamingMarkupBuilder
 //more powerful builder, can be used to create CDATA
 //until bind() is called, the xml is created, that can implement async create serveral parts in different threads
