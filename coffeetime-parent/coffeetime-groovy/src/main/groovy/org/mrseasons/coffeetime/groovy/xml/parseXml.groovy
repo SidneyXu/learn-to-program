@@ -40,7 +40,7 @@ langs.language.each{
 }
 
 langs = new XmlSlurper().parseText(xml)
-//println langs@count //@ like XPATH
-//langs.language.each{
-//    println it
-//}
+println langs.@count //@ like XPATH
+langs.language.each{
+    println it
+}

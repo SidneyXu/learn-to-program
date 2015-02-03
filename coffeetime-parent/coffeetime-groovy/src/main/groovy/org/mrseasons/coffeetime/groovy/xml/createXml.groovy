@@ -49,7 +49,7 @@ println root.toString()
 //more powerful builder, can be used to create CDATA
 //until bind() is called, the xml is created, that can implement async create serveral parts in different threads
 def comment = "<![CDATA[<!-- address is new to this release -->]]>"
-def builder = new groovy.xml.StreamingMarkupBuilder()
+builder = new groovy.xml.StreamingMarkupBuilder()
 builder.encoding = "UTF-8"
 def person = {
     mkp.xmlDeclaration()
