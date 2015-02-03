@@ -1,9 +1,9 @@
-package org.mrseasons.coffeetime.groovy.lesson00
+package org.mrseasons.coffeetime.groovy._01_hello
 
 /**
  * Created by mrseasons on 1/28/15.
  */
-class HelloWorld {
+class HelloWorldJava {
 
     static void main(args) {
         println("Hello World")
