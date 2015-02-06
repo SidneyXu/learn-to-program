@@ -38,3 +38,10 @@ def learn = {
     return it
 }
 assert "Groovy" == learn("Groovy")
+
+//error
+//def learn2={
+//    return it
+//}
+//参数大于1个，不能使用it
+//println learn2("ab","cd","ef")

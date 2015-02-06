@@ -10,4 +10,8 @@ class ImmutSong {
     String name
     String artist
     String genre
+
+    def show(){
+        artist
+    }
 }

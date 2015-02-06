@@ -5,7 +5,8 @@ package org.mrseasons.coffeetime.groovy
  */
 class ABC {
     def name
-    static void main(args){
+
+    static void main(args) {
         println "123"
         println """
 afaf
@@ -13,7 +14,7 @@ afafsfaf''""af
 fafafa<faf>f
 """
 
-        Process p="ls".execute()
+        Process p = "mvn archetype:generate".execute()
 
         println "${p.text}"
     }

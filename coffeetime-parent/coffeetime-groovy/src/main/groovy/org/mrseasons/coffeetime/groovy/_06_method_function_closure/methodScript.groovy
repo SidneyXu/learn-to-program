@@ -9,17 +9,15 @@ def say(name, word = "Hello ") {
     println word + name
 }
 
-say("Jack")
-say("Mary", "Good bye ")
+say("Jack")                 //Hello Jack
+say("Mary", "Good bye ")    //Good bye Mary
 
-
-
-//regex
-def pattern = /1010/
-def input = "1010"
-def matcher = input =~ pattern
-if (input ==~ pattern) {
-    input = matcher.replaceFirst("0101")
-    println(input)      //0101
+//automatically return last sentence
+def add(x, y) {
+    x += x
+    y += y
+    x + y
 }
+
+assert 16 == add(3, 5)
 

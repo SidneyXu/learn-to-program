@@ -8,12 +8,16 @@ class Song {
     def artist
     def genre
 
-    void setArtist(p) {
-        artist = p.toUpperCase()
+    def show() {
+        "${name}:${artist}"
     }
 
-    String getInfo(){
+    String getInfo() {
         "${name} and ${artist},${getGenre()}"
+    }
+
+    def setArtist(p) {
+        artist = p.toUpperCase()
     }
 
     @Override

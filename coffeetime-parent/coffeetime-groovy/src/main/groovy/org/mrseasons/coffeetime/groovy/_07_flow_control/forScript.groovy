@@ -15,3 +15,7 @@ def repeat(val) {
 }
 
 repeat("Hello repeatFor")
+
+def range = 0..4
+println range.class         //class groovy.lang.IntRange
+assert range instanceof List
