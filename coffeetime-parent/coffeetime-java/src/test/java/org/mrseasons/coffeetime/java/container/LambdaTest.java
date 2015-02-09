@@ -18,4 +18,9 @@ public class LambdaTest extends TestCase {
         Collections.sort(list, (first, second) -> first - second);
         System.out.println(list);   //[1, 2, 5, 6, 8, 12, 20]
     }
+
+    public void testLoop(){
+        List<Integer> list = Arrays.asList(5, 6, 2, 12, 8, 1, 20);
+        list.forEach(l-> System.out.println(l));
+    }
 }

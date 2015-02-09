@@ -19,9 +19,3 @@ def constOne(x: Int, y: => Int) = 1
 //constOne(loop, 2)
 
 
-var name = "Jack"
-
-val two = 1 + 1
-
-println(name)
-println(two)
