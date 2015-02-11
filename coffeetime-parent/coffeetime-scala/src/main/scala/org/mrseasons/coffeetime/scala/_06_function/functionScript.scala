@@ -2,6 +2,7 @@
  * Created by mrseasons on 2/9/15.
  */
 
+//block and function
 //define functions
 def addOne(m: Int): Int = m + 1
 def addTwo(m: Int): Int = {
