@@ -31,5 +31,4 @@ class Person {
   //error, is inaccessible
   //  def isYounger2(other:Person)=selfAge<other.selfAge
 
-
 }
