@@ -1,4 +1,0 @@
-rootProject.name = 'step_into_scala'
-
-include 'core'
-
