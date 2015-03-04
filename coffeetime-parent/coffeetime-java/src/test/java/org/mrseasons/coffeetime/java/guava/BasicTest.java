@@ -4,12 +4,17 @@ import com.google.common.base.Function;
 import com.google.common.base.Optional;
 import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Ordering;
+import com.google.common.hash.HashCode;
+import com.google.common.hash.HashFunction;
+import com.google.common.hash.Hashing;
 import com.sun.istack.internal.Nullable;
 import junit.framework.TestCase;
 import org.junit.Test;
 
 
 import com.google.common.base.Objects;
+
+import java.nio.charset.Charset;
 
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkNotNull;
@@ -76,5 +81,17 @@ public class BasicTest extends TestCase {
                     .compare(age, other.age)
                     .result();
         }
+    }
+
+    public void testHash(){
+        HashFunction function=Hashing.md5();
+        HashCode hashCode=function.newHasher().putLong(18).putString("Peter", Charset.forName("utf-8")).hash();
+        System.out.println(hashCode.hashCode());
+
+        hashCode=function.newHasher().putLong(18).putString("Peter", Charset.forName("utf-8")).hash();
+        System.out.println(hashCode.hashCode());
+
+        hashCode=function.newHasher().putLong(19).putString("Peter", Charset.forName("utf-8")).hash();
+        System.out.println(hashCode.hashCode());
     }
 }

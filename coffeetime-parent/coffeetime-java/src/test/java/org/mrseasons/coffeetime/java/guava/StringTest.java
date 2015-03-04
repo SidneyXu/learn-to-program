@@ -1,5 +1,6 @@
 package org.mrseasons.coffeetime.java.guava;
 
+import com.google.common.base.CharMatcher;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import junit.framework.TestCase;
@@ -47,5 +48,34 @@ public class StringTest extends TestCase {
             System.out.print(s + "~");
         }
         System.out.println();
+    }
+
+    public void testCharMatcher(){
+        String str="123af1.24a3";
+        String result= CharMatcher.DIGIT.retainFrom(str);
+        System.out.println(result);
+
+        result=CharMatcher.DIGIT.removeFrom(str);
+        System.out.println(result);
+
+        result= CharMatcher.JAVA_DIGIT.retainFrom(str);
+        System.out.println(result);
+
+        result=CharMatcher.JAVA_DIGIT.removeFrom(str);
+        System.out.println(result);
+
+        str=" 123 456 ";
+        result=CharMatcher.WHITESPACE.trimAndCollapseFrom(str,'-');
+        System.out.println(result);
+
+
+        str="　 　123　 456　 　";
+        result=CharMatcher.WHITESPACE.trimAndCollapseFrom(str,'-');
+        System.out.println(result);
+
+        str="　 　123　 456　 　";
+        result=CharMatcher.WHITESPACE.trimLeadingFrom(str);
+        System.out.println(result);
+
     }
 }

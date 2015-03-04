@@ -13,8 +13,6 @@
 	<packaging>jar</packaging>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.8</java.version>
 		<scala.version>2.11.4</scala.version>
 		<scala.version.tools>2.11</scala.version.tools>
 	</properties>
@@ -52,16 +50,6 @@
                     <!--</execution>-->
                 <!--</executions>-->
             <!--</plugin>-->
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.2</version>
-				<configuration>
-					<source>${java.version}</source>
-					<target>${java.version}</target>
-				</configuration>
-			</plugin>
 		</plugins>
 	</build>
 	<dependencies>
@@ -73,7 +61,6 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -90,11 +77,4 @@
 		</dependency>
 	</dependencies>
 
-    <repositories>
-        <repository>
-            <id>os-china</id>
-            <name>oschina</name>
-            <url>http://maven.oschina.net/content/groups/public</url>
-        </repository>
-    </repositories>
 </project>
