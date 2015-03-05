@@ -1,23 +1,12 @@
-package org.mrseasons.coffeetime.groovy._23_groovy_java;
+package org.mrseasons.coffeetime.groovy._23_groovy_java
 
-import groovy.lang.Binding;
-import groovy.lang.GroovyClassLoader;
-import groovy.lang.GroovyObject;
-import groovy.lang.GroovyShell;
-import groovy.util.GroovyScriptEngine;
-import junit.framework.TestCase;
-import org.junit.Test;
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.junit.Assert.assertEquals;
+import junit.framework.TestCase
+import org.junit.Test
 
 /**
- * Created by mrseasons on 2/6/15.
+ * Created by mrseasons on 3/5/15.
  */
-public class JavaCallGroovy extends TestCase {
+class JavaCallGroovyTest extends TestCase {
 
     @Test
     public void testGroovyShell() {

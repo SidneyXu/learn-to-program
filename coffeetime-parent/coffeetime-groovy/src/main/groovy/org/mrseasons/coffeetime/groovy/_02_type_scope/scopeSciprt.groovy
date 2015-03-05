@@ -1,4 +1,4 @@
-package org.mrseasons.coffeetime.groovy._02_scope
+package org.mrseasons.coffeetime.groovy._02_type_scope
 
 /**
  * Created by mrseasons on 2/5/15.

@@ -49,4 +49,21 @@ println(capitalizeAll()) //List()
 
 //anonymous function
 val add = (x: Int) => x + 1
-println(add(3))
+println(add(3)) //4
+
+//Nested Functions
+def closeTo(src: Double, target: Int): Double = {
+  def isGoodEnough(guess: Double): Boolean = {
+    target - guess < 0.1
+  }
+  def add(guess: Double): Double = {
+    guess + 0.01
+  }
+  def improve(guess: Double): Double = {
+    if (isGoodEnough(guess)) guess
+    else improve(add(guess))
+  }
+  improve(src)
+}
+println(closeTo(1.2, 5)) //4.900999999999993
+

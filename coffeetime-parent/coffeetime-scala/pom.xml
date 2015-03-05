@@ -13,7 +13,7 @@
 	<packaging>jar</packaging>
 
 	<properties>
-		<scala.version>2.11.4</scala.version>
+		<scala.version>2.11.5</scala.version>
 		<scala.version.tools>2.11</scala.version.tools>
 	</properties>
 
@@ -55,7 +55,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.scala-lang</groupId>
-			<artifactId>scala-library-all</artifactId>
+			<artifactId>scala-library</artifactId>
 			<version>${scala.version}</version>
 		</dependency>
 		<dependency>
