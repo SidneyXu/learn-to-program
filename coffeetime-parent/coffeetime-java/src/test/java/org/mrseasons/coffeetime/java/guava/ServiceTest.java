@@ -5,7 +5,6 @@ import com.google.common.util.concurrent.AbstractIdleService;
 import com.google.common.util.concurrent.MoreExecutors;
 import com.google.common.util.concurrent.Service;
 import junit.framework.TestCase;
-import sun.jvm.hotspot.utilities.Assert;
 
 import java.util.List;
 import java.util.concurrent.Executor;
