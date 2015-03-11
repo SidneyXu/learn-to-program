@@ -1,6 +1,7 @@
 package org.mrseasons.coffeetime.groovy._29_sql
 
 import groovy.sql.Sql
+import groovy.text.SimpleTemplateEngine
 
 /**
  * Created by mrseasons on 3/10/15.
@@ -18,6 +19,15 @@ class SqlTest extends GroovyTestCase {
     protected void setUp() throws Exception {
         super.setUp()
         sql.execute("create table if not exists toys(toyName varchar(40), unitPrice int(8))")
+    }
+
+    static class Toy {
+        def toyName
+        def unitPrice
+
+        String toString() {
+            return toyName + ":" + unitPrice;
+        }
     }
 
 
@@ -42,14 +52,6 @@ class SqlTest extends GroovyTestCase {
         sql.execute("delete from toys")
     }
 
-    static class Toy {
-        def toyName
-        def unitPrice
-
-        String toString() {
-            return toyName + ":" + unitPrice;
-        }
-    }
 
     void testSqlQuery() {
         def q = new SqlQuery() {
@@ -69,4 +71,16 @@ class SqlTest extends GroovyTestCase {
         }
     }
 
+    void testTemplate(){
+        def file=new File("src/test/resources/toy_html_sql.template");
+        println file.getAbsolutePath()
+
+        def binding=["title":"Display Toys","sql":sql];
+        def engine=new SimpleTemplateEngine()
+        def template=engine.createTemplate(file).make(binding)
+        println(template.toString())
+
+        def outXml=new File('outputs/toy_sql.html')
+        outXml.write(template.toString())
+    }
 }

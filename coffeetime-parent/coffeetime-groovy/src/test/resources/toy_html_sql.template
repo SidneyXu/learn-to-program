@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>${title}</title>
+    </head>
+    <body>
+        <table>
+            <th>Toy Name</th><th>Unit Price</th>
+            <%sql.eachRow("select * from toys"){toy->%>
+                <tr>
+                    <td>${toy.toyName}</td>
+                    <td>${toy.unitPrice}</td>
+                </tr>
+            <%}%>
+        </table>
+    </body>
+</html>

@@ -1,4 +1,4 @@
-package org.mrseasons.coffeetime.scala._04_operator
+package org.mrseasons.coffeetime.scala._04_operator_apply
 
 import scala.collection.mutable
 
