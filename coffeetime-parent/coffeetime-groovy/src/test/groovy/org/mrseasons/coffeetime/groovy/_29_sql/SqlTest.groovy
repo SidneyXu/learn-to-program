@@ -1,8 +1,6 @@
 package org.mrseasons.coffeetime.groovy._29_sql
-
 import groovy.sql.Sql
-import groovy.text.SimpleTemplateEngine
-
+import org.mrseasons.coffeetime.groovy.support.Toy
 /**
  * Created by mrseasons on 3/10/15.
  */
@@ -13,23 +11,13 @@ class SqlTest extends GroovyTestCase {
     def password = "root"
     def driver = "com.mysql.jdbc.Driver"
 
-    Sql sql = Sql.newInstance(db, username, null, driver)
+    Sql sql = Sql.newInstance(db, username, password, driver)
 
     @Override
     protected void setUp() throws Exception {
         super.setUp()
         sql.execute("create table if not exists toys(toyName varchar(40), unitPrice int(8))")
     }
-
-    static class Toy {
-        def toyName
-        def unitPrice
-
-        String toString() {
-            return toyName + ":" + unitPrice;
-        }
-    }
-
 
     void testSql() {
         assertNotNull(sql)
@@ -52,6 +40,26 @@ class SqlTest extends GroovyTestCase {
         sql.execute("delete from toys")
     }
 
+    void testDataSet() {
+        1.upto(10) { n ->
+            def toy = new Toy(toyName: "toy" + n, unitPrice: n * 100)
+            sql.execute("insert into toys values(${toy.toyName}, ${toy.unitPrice})")
+        }
+
+        //query
+        def toys = sql.dataSet("toys")
+        def list = toys.rows()
+        list.each { t ->
+            println t.toyName + ":" + t.unitPrice
+        }
+
+        //insert
+        toys.add(toyName: "toy999", unitPrice: 999)
+        toys.each { toy ->
+            println toy.toyName
+        }
+    }
+
 
     void testSqlQuery() {
         def q = new SqlQuery() {
@@ -65,22 +73,9 @@ class SqlTest extends GroovyTestCase {
 
         q.sql = sql
         q.query = "select * from toys"
-        Toy[] toys = q.execute();
+        Toy[] toys = q.execute()
         toys.each { t ->
             println(t.toyName + ":" + t.unitPrice)
         }
-    }
-
-    void testTemplate(){
-        def file=new File("src/test/resources/toy_html_sql.template");
-        println file.getAbsolutePath()
-
-        def binding=["title":"Display Toys","sql":sql];
-        def engine=new SimpleTemplateEngine()
-        def template=engine.createTemplate(file).make(binding)
-        println(template.toString())
-
-        def outXml=new File('outputs/toy_sql.html')
-        outXml.write(template.toString())
     }
 }

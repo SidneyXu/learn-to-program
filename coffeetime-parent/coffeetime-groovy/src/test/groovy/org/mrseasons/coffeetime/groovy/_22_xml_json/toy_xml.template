@@ -1,4 +1,0 @@
-<toy>
-    <toyName>${toyName}</toyName>
-    <unitPrice>${unitPrice}</unitPrice>
-</toy>

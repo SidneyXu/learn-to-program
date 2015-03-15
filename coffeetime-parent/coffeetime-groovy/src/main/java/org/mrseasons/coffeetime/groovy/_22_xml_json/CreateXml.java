@@ -1,4 +1,4 @@
-package org.mrseasons.coffeetime.groovy.xml;
+package org.mrseasons.coffeetime.groovy._22_xml_json;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
