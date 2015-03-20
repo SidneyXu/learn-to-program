@@ -1,4 +1,4 @@
-package org.mrseasons.coffeetime.groovy._02_type_scope
+package org.mrseasons.coffeetime.groovy._02_03_type_scope_script
 
 
 /**

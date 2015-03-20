@@ -3,6 +3,7 @@ package org.mrseasons.coffeetime.scala._17_generic_type
 /**
  * Created by mrseasons on 3/12/15.
  */
+//upper bounds
 abstract class Bag[A <: Ordered[A]] {
   def incl(x: A): Bag[A]
 

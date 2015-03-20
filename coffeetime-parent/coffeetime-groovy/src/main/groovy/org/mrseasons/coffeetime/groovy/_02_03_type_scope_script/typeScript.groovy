@@ -1,4 +1,4 @@
-package org.mrseasons.coffeetime.groovy._02_type_scope
+package org.mrseasons.coffeetime.groovy._02_03_type_scope_script
 
 /**
  * Created by mrseasons on 2/3/15.
@@ -91,14 +91,14 @@ println str.tokenize()                                      //[Groovy, Grails&lx
 println str.tokenize('&')                                   //[Groovy Grails, lxt]
 println str.tokenize().getClass().getName()                 //java.util.ArrayList
 
-//类型推断
+//Type Inference
 String st1 = "Hello World";
 def str2 = "Hello World"
 
-//静态类型
+//Static Type
 Date staticDate = new Date()
 
-//动态类型
+//Dynamic Type
 def dynamicDate = new Date()
 
 println staticDate.class  //class java.util.Date
@@ -108,7 +108,7 @@ println dynamicDate.class  //class java.util.Date
 dynamicDate = 2
 println dynamicDate
 
-//一切皆对象
+//everything is object
 int i = 1
 def j = 2
 println i.class    //class java.lang.Integer

@@ -1,4 +1,4 @@
-package org.mrseasons.coffeetime.scala._19_high_order_function
+package org.mrseasons.coffeetime.scala._20_high_order_function
 
 import java.awt.event.{ActionListener, ActionEvent}
 import javax.swing.JButton

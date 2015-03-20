@@ -1,13 +1,13 @@
-package org.mrseasons.coffeetime.groovy._02_type_scope
+package org.mrseasons.coffeetime.groovy._02_03_type_scope_script
 
 /**
  * Created by mrseasons on 2/5/15.
  */
-//本地域
+//local scope
 String hello = "hello"
 def world = "world"
 
-//绑定域
+//binding scope
 helloworld = "hello world"
 
 void check() {

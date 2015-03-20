@@ -1,4 +1,4 @@
-package org.mrseasons.coffeetime.scala._18_regex
+package org.mrseasons.coffeetime.scala._19_regex
 
 /**
  * Created by mrseasons on 2/16/15.
