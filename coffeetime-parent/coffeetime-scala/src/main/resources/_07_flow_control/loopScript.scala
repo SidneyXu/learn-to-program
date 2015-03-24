@@ -1,3 +1,5 @@
+import scala.collection.GenTraversable
+
 /**
  * Created by mrseasons on 2/9/15.
  */
@@ -48,4 +50,25 @@ println()
 var result = for (i <- 1 to 10) yield {
   i % 3
 }
-println(result) //Vector(1, 2, 0, 1, 2, 0, 1, 2, 0, 1)
+println(result)
+
+//Vector(1, 2, 0, 1, 2, 0, 1, 2, 0, 1)
+
+
+class Person(val name: String, val age: Int) {
+}
+
+val persons = List(new Person(name = "Jane", age = 18), new Person(name = "Peter", age = 20),
+  new Person(name = "Anna", age = 15), new Person(name = "Andy", age = 22))
+val ages = for (p <- persons if p.age > 20) yield p.age
+//sentence above is translated to below
+val newAges = persons filter (p => p.age > 20) map (p => p.age)
+println(ages) //List(22)
+println(newAges) //List(22)
+
+println(persons.map(p => p.age)) //List(18, 20, 15, 22)
+println(persons.flatMap(p => List(p.age)).foreach(p => println("flatMap", p))) //(flatMap,18)(flatMap,20)(flatMap,15)(flatMap,22)
+println(persons.filter(p => {
+  if (p.age > 20) true else false
+}).foreach(p => println("filter", p.age))) //(filter,22)
+
