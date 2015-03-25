@@ -1,4 +1,4 @@
-package org.mrseasons.coffeetime.scala._21_io
+package org.mrseasons.coffeetime.scala._22_io
 
 /**
  * Created by mrseasons on 2/16/15.

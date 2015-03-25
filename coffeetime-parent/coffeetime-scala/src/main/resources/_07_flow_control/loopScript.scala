@@ -72,3 +72,13 @@ println(persons.filter(p => {
   if (p.age > 20) true else false
 }).foreach(p => println("filter", p.age))) //(filter,22)
 
+//stream
+def range(start: Int, end: Int): Stream[Int] = {
+  if (start >= end) Stream.Empty
+  else Stream.cons(start, range(start + 1, end))
+}
+val r:Stream[Int]= Stream.range(10,20)
+println(r, r.getClass, r.head, r.tail)
+
+//val r2=31::r
+
