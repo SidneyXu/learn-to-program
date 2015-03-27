@@ -11,21 +11,22 @@ val two: Int = 2
 var lastName = "Peter"
 val three = 3
 
-//? loading mechanism
-val words = ("a", "b", "c", new Date().getTime)
-lazy val lazyWords = ("a", "b", "c", new Date().getTime)
-def newWords = ("a", "b", "c", new Date().getTime)
-Thread.sleep(3000)
+//loading mechanism
+val words = ("a", "b", "c", Math.random())
+lazy val lazyWords = ("a", "b", "c", Math.random())
+def newWords = ("a", "b", "c", Math.random())
 
-println(words)
-println(lazyWords)
-println(newWords)
+println("words", words) //(words,(a,b,c,0.9433242704721396))
+println("words", words) //(words,(a,b,c,0.9433242704721396))
+println("words", words) //(words,(a,b,c,0.9433242704721396))
 
-Thread.sleep(3000)
+println("lazyWords", lazyWords) //(lazyWords,(a,b,c,0.38060170145565875))
+println("lazyWords", lazyWords) //(lazyWords,(a,b,c,0.38060170145565875))
+println("lazyWords", lazyWords) //(lazyWords,(a,b,c,0.38060170145565875))
 
-println(words)
-println(lazyWords)
-println(newWords)
+println("newWords", newWords) //(newWords,(a,b,c,0.946821735977215))
+println("newWords", newWords) //(newWords,(a,b,c,0.9000251147436494))
+println("newWords", newWords) //(newWords,(a,b,c,0.22574002682293237))
 
 
 def square(x: Double) = x * x
@@ -42,5 +43,5 @@ println(sum2(3, 2 + 2)) //25.0
 def loop: Int = loop * 1
 def constOne(x: Int, y: => Int) = 1
 
-println(constOne(1, loop))  //1
+println(constOne(1, loop)) //1
 //println(constOne(loop, 1))  //loop forever
