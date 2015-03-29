@@ -14,6 +14,10 @@ import java.util.List;
  */
 public class Third {
 
+    private static void hello() {
+        System.out.println("hello");
+    }
+
     @Test
     public void testOldFunctionalInterface() {
         List<Object> list = new ArrayList<>();
@@ -45,10 +49,6 @@ public class Third {
         Address address = new Address("a", "b");
         Accessor<Address, String> accessor = Address::getCity;
         System.out.println(accessor.access(address));
-    }
-
-    private static void hello() {
-        System.out.println("hello");
     }
 
     interface Accessor<BEAN, PROPERTY> {

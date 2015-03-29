@@ -11,20 +11,20 @@ import java.util.function.Predicate;
  */
 public class PredicateTest {
 
-    // before
-    @Test
-    public void testOldSumAll() {
-        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
-        System.out.println(sumAll(numbers));
-        System.out.println(sumAllEven(numbers));
-    }
-
     private static int sumAll(List<Integer> numbers) {
         int total = 0;
         for (int number : numbers) {
             total += number;
         }
         return total;
+    }
+
+    // before
+    @Test
+    public void testOldSumAll() {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
+        System.out.println(sumAll(numbers));
+        System.out.println(sumAllEven(numbers));
     }
 
     private int sumAllEven(List<Integer> numbers) {

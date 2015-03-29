@@ -21,11 +21,11 @@ object LoggerExample {
 }
 
 class LoggerExample extends Logger {
+  override val minLength: Int = 1
+
   override def log(msg: String): Unit = println(msg)
 
   def say(msg: String): Unit = {
     show(msg)
   }
-
-  override val minLength: Int = 1
 }

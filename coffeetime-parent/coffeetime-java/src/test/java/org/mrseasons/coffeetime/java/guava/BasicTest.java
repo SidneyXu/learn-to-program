@@ -67,6 +67,18 @@ public class BasicTest extends TestCase {
         });
     }
 
+    public void testHash() {
+        HashFunction function = Hashing.md5();
+        HashCode hashCode = function.newHasher().putLong(18).putString("Peter", Charset.forName("utf-8")).hash();
+        System.out.println(hashCode.hashCode());
+
+        hashCode = function.newHasher().putLong(18).putString("Peter", Charset.forName("utf-8")).hash();
+        System.out.println(hashCode.hashCode());
+
+        hashCode = function.newHasher().putLong(19).putString("Peter", Charset.forName("utf-8")).hash();
+        System.out.println(hashCode.hashCode());
+    }
+
     private static class Person implements Comparable {
         private String firstName;
         private String lastName;
@@ -81,17 +93,5 @@ public class BasicTest extends TestCase {
                     .compare(age, other.age)
                     .result();
         }
-    }
-
-    public void testHash(){
-        HashFunction function=Hashing.md5();
-        HashCode hashCode=function.newHasher().putLong(18).putString("Peter", Charset.forName("utf-8")).hash();
-        System.out.println(hashCode.hashCode());
-
-        hashCode=function.newHasher().putLong(18).putString("Peter", Charset.forName("utf-8")).hash();
-        System.out.println(hashCode.hashCode());
-
-        hashCode=function.newHasher().putLong(19).putString("Peter", Charset.forName("utf-8")).hash();
-        System.out.println(hashCode.hashCode());
     }
 }

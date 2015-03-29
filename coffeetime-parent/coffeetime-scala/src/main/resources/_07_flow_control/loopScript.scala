@@ -1,11 +1,7 @@
 
 
-/**
- * Created by mrseasons on 2/9/15.
- */
-
-//while
-var x = 5;
+val persons = List(new Person(name = "Jane", age = 18), new Person(name = "Peter", age = 20),
+  new Person(name = "Anna", age = 15), new Person(name = "Andy", age = 22))
 while (x < 10) {
   x += 1
 
@@ -20,8 +16,7 @@ println()
 for (i <- 1 until 5)
   print(i) //1234
 println()
-
-var sum = ""
+val ages = for (p <- persons if p.age > 20) yield p.age
 for (ch <- "Hello")
   sum += ch
 println(sum) //Hello
@@ -45,24 +40,25 @@ for (i <- 1 to 3; from = 4 - i; j <- from to 3) {
   println(i, j, from) //(1,3,3)(2,2,2)(2,3,2)(3,1,1)(3,2,1)(3,3,1)
 }
 println()
+//sentence above is translated to below
+val newAges = persons filter (p => p.age > 20) map (p => p.age)
+println(result)
 
+//Vector(1, 2, 0, 1, 2, 0, 1, 2, 0, 1)
+/**
+ * Created by mrseasons on 2/9/15.
+ */
+
+//while
+var x = 5;
+var sum = ""
 //yield
 var result = for (i <- 1 to 10) yield {
   i % 3
 }
-println(result)
-
-//Vector(1, 2, 0, 1, 2, 0, 1, 2, 0, 1)
-
 
 class Person(val name: String, val age: Int) {
 }
-
-val persons = List(new Person(name = "Jane", age = 18), new Person(name = "Peter", age = 20),
-  new Person(name = "Anna", age = 15), new Person(name = "Andy", age = 22))
-val ages = for (p <- persons if p.age > 20) yield p.age
-//sentence above is translated to below
-val newAges = persons filter (p => p.age > 20) map (p => p.age)
 println(ages) //List(22)
 println(newAges) //List(22)
 

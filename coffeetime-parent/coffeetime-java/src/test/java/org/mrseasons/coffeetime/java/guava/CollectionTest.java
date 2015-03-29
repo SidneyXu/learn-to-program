@@ -11,19 +11,6 @@ import java.util.Arrays;
  */
 public class CollectionTest extends TestCase {
 
-    private static class Person {
-        private String name;
-
-        public Person(String name) {
-            this.name = name;
-        }
-
-        @Override
-        public String toString() {
-            return name;
-        }
-    }
-
     /**
      * JDK 也有提供Collections.unmodifiable之类的方法，但是这些方法返回的结果才是不可变的集合，无法保证原集合是否被改变
      * 且这些不可变的集合保有对原集合的引用，太过笨重
@@ -41,5 +28,18 @@ public class CollectionTest extends TestCase {
         System.out.println(letters);
 
 
+    }
+
+    private static class Person {
+        private String name;
+
+        public Person(String name) {
+            this.name = name;
+        }
+
+        @Override
+        public String toString() {
+            return name;
+        }
     }
 }

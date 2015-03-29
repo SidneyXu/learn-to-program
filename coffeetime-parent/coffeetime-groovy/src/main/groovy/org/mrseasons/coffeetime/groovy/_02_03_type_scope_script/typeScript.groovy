@@ -1,7 +1,7 @@
 package org.mrseasons.coffeetime.groovy._02_03_type_scope_script
 
 /**
- * Created by mrseasons on 2/3/15.
+ * Created by mrseasons on 2015/2/3.
  */
 //Data type
 //Number
@@ -90,6 +90,8 @@ str = "Groovy Grails&lxt"
 println str.tokenize()                                      //[Groovy, Grails&lxt]
 println str.tokenize('&')                                   //[Groovy Grails, lxt]
 println str.tokenize().getClass().getName()                 //java.util.ArrayList
+println str.tokenize("t").getClass().getName()              //java.util.ArrayList
+println str.split("t").getClass().getName()                 //[Ljava.lang.String;
 
 //Type Inference
 String st1 = "Hello World";

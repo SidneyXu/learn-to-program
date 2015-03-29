@@ -63,9 +63,8 @@ val result = for (ele <- c) yield {
   ele * 2
 }
 println(result) //ArrayBuffer(2, 4, 6, 8)
-
-//filter
-var filter = c.filter(_ % 2 == 0)
+//---Multidimensional array---
+val mula = Array.ofDim[Double](3, 4)
 println(filter) //ArrayBuffer(2, 4)
 
 filter = c.filter(_ % 2 == 0).map(2 * _)
@@ -77,10 +76,7 @@ filter = c.filter {
   2 * _
 }
 println(filter) //ArrayBuffer(4, 8)
-
-
-//---common methods---
-var arr = Array(1, 3, 2, 2)
+val mulb = new Array[Array[Int]](10)
 assert(8 == arr.sum)
 assert(3 == arr.max)
 assert(1 == arr.min)
@@ -98,7 +94,7 @@ println(arr.mkString("<", ",", ">")) //<1,3,2,2>
 println(arr.toList) //List(1, 3, 2, 2)
 Sorting.quickSort(arr)
 println(arr.toList) //List(1, 2, 2, 3)
-
-//---Multidimensional array---
-val mula = Array.ofDim[Double](3, 4)
-val mulb = new Array[Array[Int]](10)
+//filter
+var filter = c.filter(_ % 2 == 0)
+//---common methods---
+var arr = Array(1, 3, 2, 2)

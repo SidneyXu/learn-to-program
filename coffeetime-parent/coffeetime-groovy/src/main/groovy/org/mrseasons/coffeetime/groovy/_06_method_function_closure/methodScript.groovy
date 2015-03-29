@@ -1,7 +1,7 @@
 package org.mrseasons.coffeetime.groovy._06_method_function_closure
 
 /**
- * Created by mrseasons on 1/28/15.
+ * Created by mrseasons on 2015/1/28.
  */
 
 //default value

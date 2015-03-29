@@ -1,7 +1,7 @@
 package org.mrseasons.coffeetime.groovy._02_03_type_scope_script
 
 /**
- * Created by mrseasons on 3/20/15.
+ * Created by mrseasons on 2015/3/20.
  */
 def scope = new scopeSciprt()
 

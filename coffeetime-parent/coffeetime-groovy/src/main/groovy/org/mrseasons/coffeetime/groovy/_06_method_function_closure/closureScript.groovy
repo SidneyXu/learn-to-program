@@ -1,7 +1,7 @@
 package org.mrseasons.coffeetime.groovy._06_method_function_closure
 
 /**
- * Created by mrseasons on 2/6/15.
+ * Created by mrseasons on 2015/2/6.
  */
 //list
 def acoll = ["Groovy", "Java", "Ruby"]
@@ -27,7 +27,7 @@ map.each { key, value ->
 }
 println()
 
-//函数字面值
+//function literal
 def excite = { word ->
     return "${word}!!"
 }
@@ -43,5 +43,5 @@ assert "Groovy" == learn("Groovy")
 //def learn2={
 //    return it
 //}
-//参数大于1个，不能使用it
+//"it" is only used for one parameter
 //println learn2("ab","cd","ef")

@@ -11,9 +11,26 @@ import junit.framework.TestCase;
  */
 public class ConstructorTest extends TestCase {
 
+    public void testReferStaticMethod() {
+        Something something = new Something();
+        Converter<String, String> converter = something::startsWith;    //startsWith是接口Converter的实现
+        String converted = converter.convert("Java");
+        System.out.println(converted);    // "J"
+    }
+
+    public void testReferConstructor() {
+        PersonFactory<Person> personFactory = Person::new;
+        Person person = personFactory.create("Peter", "Parker");
+    }
+
     @FunctionalInterface
     private interface Converter<F, T> {
         T convert(F from);
+    }
+
+    @FunctionalInterface
+    interface PersonFactory<P extends Person> {
+        P create(String firstName, String lastName);
     }
 
     private static class Something {
@@ -33,23 +50,6 @@ public class ConstructorTest extends TestCase {
             this.firstName = firstName;
             this.lastName = lastName;
         }
-    }
-
-    @FunctionalInterface
-    interface PersonFactory<P extends Person> {
-        P create(String firstName, String lastName);
-    }
-
-    public void testReferStaticMethod() {
-        Something something = new Something();
-        Converter<String, String> converter = something::startsWith;    //startsWith是接口Converter的实现
-        String converted = converter.convert("Java");
-        System.out.println(converted);    // "J"
-    }
-
-    public void testReferConstructor() {
-        PersonFactory<Person> personFactory = Person::new;
-        Person person = personFactory.create("Peter", "Parker");
     }
 
 }

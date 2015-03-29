@@ -9,11 +9,10 @@ class BMW extends Car with Shiny {
 
   //placeholder
   override val price: Int = 10
+  //from shiny
+  override val shineRefraction: Int = 12
 
   override def run: Unit = {
     println("run")
   }
-
-  //from shiny
-  override val shineRefraction: Int = 12
 }

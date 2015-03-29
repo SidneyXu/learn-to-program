@@ -49,7 +49,7 @@ String status = agentStatus != null ? agentStatus : "Inactive"
 assert status == "Active"
 
 //new
-//自动转为boolean值
+//from other type to boolean automatically
 status = agentStatus ? agentStatus : "Inactive"
 assert status == "Active"
 

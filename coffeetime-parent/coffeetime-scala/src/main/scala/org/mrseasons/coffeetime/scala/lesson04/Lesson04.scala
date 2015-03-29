@@ -11,12 +11,10 @@ object Lesson04 {
     matchTryCatchFaceExp
   }
 
-
-//  null object
-//  finish
-  def matchTryCatch: Unit = {
-    try {
-      throw new NullPointerException
+  //index out of boundfinish
+  def matchTryCatchFaceExp: Unit = {
+    val result: Unit = try {
+      throw new IndexOutOfBoundsException
     } catch {
       case e: NullPointerException => println("null object")
       case e: IndexOutOfBoundsException => print("index out of bound")
@@ -25,10 +23,11 @@ object Lesson04 {
     }
   }
 
-  //index out of boundfinish
-  def matchTryCatchFaceExp: Unit = {
-    val result: Unit = try {
-      throw new IndexOutOfBoundsException
+  //  null object
+  //  finish
+  def matchTryCatch: Unit = {
+    try {
+      throw new NullPointerException
     } catch {
       case e: NullPointerException => println("null object")
       case e: IndexOutOfBoundsException => print("index out of bound")

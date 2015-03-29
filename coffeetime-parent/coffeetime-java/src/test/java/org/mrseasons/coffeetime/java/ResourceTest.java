@@ -22,38 +22,10 @@ public class ResourceTest {
         }
     }
 
-    static class Res {
-        public Res() {
-            System.out.println("open res");
-        }
-
-        public void operate() {
-            System.out.println("operate");
-        }
-
-        public void dispose() {
-            System.out.println("dispose");
-        }
-    }
-
     //after
     @Test
     public void testNewUseResource() {
         NRes.withResource(res -> res.operate());
-    }
-
-    // consumer
-    static class NRes {
-
-        public static void withResource(Consumer<Res> consumer) {
-            Res res = new Res();
-            try {
-                consumer.accept(res);
-            } finally {
-                res.dispose();
-            }
-        }
-
     }
 
     //before
@@ -103,6 +75,34 @@ public class ResourceTest {
 //		List<String> filteredNames = names
 //		        .filter(e -> e.length() >= 4)
 //		        .into(new ArrayList<String>());
+
+    }
+
+    static class Res {
+        public Res() {
+            System.out.println("open res");
+        }
+
+        public void operate() {
+            System.out.println("operate");
+        }
+
+        public void dispose() {
+            System.out.println("dispose");
+        }
+    }
+
+    // consumer
+    static class NRes {
+
+        public static void withResource(Consumer<Res> consumer) {
+            Res res = new Res();
+            try {
+                consumer.accept(res);
+            } finally {
+                res.dispose();
+            }
+        }
 
     }
 }

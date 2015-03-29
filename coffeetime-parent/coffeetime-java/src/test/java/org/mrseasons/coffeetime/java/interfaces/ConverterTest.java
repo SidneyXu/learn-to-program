@@ -13,14 +13,14 @@ import junit.framework.TestCase;
  */
 public class ConverterTest extends TestCase {
 
+    public void testCore() {
+        Converter<String, Integer> converter = (from) -> Integer.parseInt(from);
+        System.out.println(converter.convert("123"));
+    }
+
     //声明为函数式接口
     @FunctionalInterface
     private interface Converter<F, T> {
         T convert(F from);
-    }
-
-    public void testCore() {
-        Converter<String, Integer> converter = (from) -> Integer.parseInt(from);
-        System.out.println(converter.convert("123"));
     }
 }

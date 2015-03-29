@@ -14,13 +14,12 @@ package A {
     package C {
 
       class D {
-        def print = println("D")
-
         //directly access
         val b = new B
+        val d2 = new D2
         b.print
 
-        val d2 = new D2
+        def print = println("D")
         d2.desc
       }
 
@@ -35,10 +34,10 @@ package A.B.C {
   import org.mrseasons.coffeetime.scala._13_package.A.B.B
 
   class D2 {
-    def print = println("D2")
-
     //need import package
     val b = new B
+
+    def print = println("D2")
     b.print
 
     private[C] def desc = "desc"

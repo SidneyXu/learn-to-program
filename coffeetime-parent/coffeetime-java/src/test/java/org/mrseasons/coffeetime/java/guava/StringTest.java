@@ -12,18 +12,6 @@ import java.util.Iterator;
  */
 public class StringTest extends TestCase {
 
-    class Person{
-        private String name;
-        public Person(String name){
-            this.name=name;
-        }
-
-        @Override
-        public String toString() {
-            return name;
-        }
-    }
-
     public void testJoiner(){
         Joiner joiner = Joiner.on("; ").skipNulls();
         String result=joiner.join("a","b",null,"c");
@@ -77,5 +65,18 @@ public class StringTest extends TestCase {
         result=CharMatcher.WHITESPACE.trimLeadingFrom(str);
         System.out.println(result);
 
+    }
+
+    class Person {
+        private String name;
+
+        public Person(String name) {
+            this.name = name;
+        }
+
+        @Override
+        public String toString() {
+            return name;
+        }
     }
 }
