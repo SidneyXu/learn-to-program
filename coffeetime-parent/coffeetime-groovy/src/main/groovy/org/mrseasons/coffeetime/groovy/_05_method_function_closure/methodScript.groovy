@@ -1,4 +1,4 @@
-package org.mrseasons.coffeetime.groovy._06_method_function_closure
+package org.mrseasons.coffeetime.groovy._05_method_function_closure
 
 /**
  * Created by mrseasons on 2015/1/28.

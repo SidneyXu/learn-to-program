@@ -1,13 +1,15 @@
-package org.mrseasons.coffeetime.groovy._10_collection
+package org.mrseasons.coffeetime.groovy._09_collection
 
 /**
- * Created by mrseasons on 2/6/15.
+ * Created by mrseasons on 2015/2/6.
  */
 //---List---
+// constructor
 def list = ["Groovy", "Java", "Scala"]
 assert list instanceof Collection
 assert list instanceof ArrayList
 
+// empty list
 def emptyList = []
 println emptyList
 

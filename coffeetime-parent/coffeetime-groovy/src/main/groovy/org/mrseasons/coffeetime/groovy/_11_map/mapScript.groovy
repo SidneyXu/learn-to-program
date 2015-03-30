@@ -1,12 +1,15 @@
 package org.mrseasons.coffeetime.groovy._11_map
 
 /**
- * Created by mrseasons on 2/6/15.
+ * Created by mrseasons on 2015/2/6.
  */
 //---Map---
-def emptyMap = [:]
+//constructor, key can be literal or string
 def map = [name: "Peter", "age": 12, "national": "USA"]
 println map.getClass()      //class java.util.LinkedHashMap
+
+//empty map
+def emptyMap = [:]
 
 //map.put(uid, 1000)    error
 map.put("id", 10)

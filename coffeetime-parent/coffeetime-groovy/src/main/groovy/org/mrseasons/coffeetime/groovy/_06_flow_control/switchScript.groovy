@@ -1,7 +1,7 @@
-package org.mrseasons.coffeetime.groovy._07_flow_control
+package org.mrseasons.coffeetime.groovy._06_flow_control
 
 /**
- * Created by mrseasons on 2/9/15.
+ * Created by mrseasons on 2015/2/9.
  */
 def test(var) {
     switch (var) {
