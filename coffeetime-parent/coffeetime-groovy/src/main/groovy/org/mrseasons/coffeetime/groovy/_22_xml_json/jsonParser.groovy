@@ -3,7 +3,7 @@ package org.mrseasons.coffeetime.groovy._22_xml_json
 import groovy.json.JsonSlurper
 
 /**
- * Created by mrseasons on 2/6/15.
+ * Created by mrseasons on 2015/2/6.
  */
 def json = """
 {

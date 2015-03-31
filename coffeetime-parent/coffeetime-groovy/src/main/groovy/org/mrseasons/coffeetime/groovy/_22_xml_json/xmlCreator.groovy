@@ -4,7 +4,7 @@ import groovy.xml.MarkupBuilder
 import groovy.xml.StreamingMarkupBuilder
 
 /**
- * Created by mrseasons on 2/6/15.
+ * Created by mrseasons on 2015/2/6.
  */
 //---MarkupBuilder----
 def sw = new StringWriter()
@@ -17,6 +17,7 @@ xml.langs(type: "current") {
 println(sw)
 
 //---StreamingMarkupBuilder---
+//more powerful
 def comment = "<![CDATA[<!-- address is new to this release -->]]>"
 builder = new StreamingMarkupBuilder()
 builder.encoding = "UTF-8"

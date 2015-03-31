@@ -4,13 +4,13 @@ import junit.framework.TestCase
 import org.junit.Test
 
 /**
- * Created by mrseasons on 3/5/15.
+ * Created by mrseasons on 2015/3/5.
  */
 class JavaCallGroovyTest extends TestCase {
 
     @Test
     public void testGroovyShell() {
-        //用于计算简单的表达式和脚本
+        //simple
         Binding binding = new Binding();
         binding.setVariable("x", 3);
         binding.setVariable("y", 2.1);
@@ -37,7 +37,7 @@ class JavaCallGroovyTest extends TestCase {
 
     @Test
     public void testGroovyScriptEngine() throws Exception {
-        //可以实现动态脚本更新，运行时修改系统属性等功能
+        //dynamically update script
         String[] roots = {"src/main/groovy/org/mrseasons/coffeetime/groovy/_23_groovy_java"};
         GroovyScriptEngine engine = new GroovyScriptEngine(roots);
         Binding binding = new Binding();

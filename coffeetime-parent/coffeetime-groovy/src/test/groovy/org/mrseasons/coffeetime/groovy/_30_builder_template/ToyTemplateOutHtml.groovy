@@ -5,7 +5,7 @@ import org.mrseasons.coffeetime.groovy.support.Toy
 
 
 /**
- * Created by mrseaons on 2015/1/3.
+ * Created by mrseasons on 2015/1/3.
  */
 class ToyTemplateOutHtml {
 

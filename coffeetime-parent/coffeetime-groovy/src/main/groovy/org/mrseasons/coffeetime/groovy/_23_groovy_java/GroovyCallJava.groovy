@@ -2,7 +2,7 @@ import org.mrseasons.coffeetime.groovy._23_groovy_java.GroovyBean
 import org.mrseasons.coffeetime.groovy._23_groovy_java.JavaBean
 
 /**
- * Created by mrseasons on 2/6/15.
+ * Created by mrseasons on 2015/2/6.
  */
 class GroovyCallJava {
 

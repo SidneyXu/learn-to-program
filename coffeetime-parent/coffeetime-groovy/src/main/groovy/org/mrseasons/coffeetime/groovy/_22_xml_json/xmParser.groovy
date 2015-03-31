@@ -1,7 +1,7 @@
 package org.mrseasons.coffeetime.groovy._22_xml_json
 
 /**
- * Created by mrseasons on 2/6/15.
+ * Created by mrseasons on 2015/2/6.
  */
 //---XmlParser---
 //parse xml file
