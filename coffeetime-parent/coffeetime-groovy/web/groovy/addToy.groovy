@@ -1,9 +1,10 @@
 package groovy
 
 import groovy.sql.Sql
+import org.mrseasons.coffeetime.groovy.support.Toy
 
 /**
- * Created by mrseaons on 2015/1/3.
+ * Created by mrseasons on 2015/1/3.
  */
 def db = "jdbc:mysql://localhost:3306/groovy?useUnicode=true&characterEncoding=UTF-8"
 def username = "root"
