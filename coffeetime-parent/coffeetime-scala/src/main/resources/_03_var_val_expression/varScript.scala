@@ -43,3 +43,14 @@ def constOne(x: Int, y: => Int) = 1
 
 println(constOne(1, loop)) //1
 //println(constOne(loop, 1))  //loop forever
+
+//face expression
+val brand ="HP"
+val color: String = if (brand == "TI") {
+  "blue"
+} else if (brand == "HP") {
+  "black"
+} else {
+  "white"
+}
+println(color)

@@ -66,3 +66,10 @@ def closeTo(src: Double, target: Int): Double = {
 }
 println(closeTo(1.2, 5)) //4.900999999999993
 
+//anonymous functions
+val aaa = (x: Int) => x + 1
+val bbb = {
+  def f(x: Int) = x + 1; f _
+}
+println(aaa(1))
+println(bbb(3))
