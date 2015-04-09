@@ -10,23 +10,23 @@ object OperatorExample {
   def main(args: Array[String]) {
     //Identifier
     val ! = 1
-    val `val` = 2
+//    val `val` = 2
 
     //Infix Operator
     1 to 10
     1.to(10)
     1 -> 10
     1.->(10)
-    1 + 10
-    1.+(10)
+//    1 + 10
+//    1.+(10)
 
     //Unary Operator
-    1 toString
+//    1 toString
 
-    1.toString()
+//    1.toString()
 
-    -1
-    1.unary_-
+//    -1
+//    1.unary_-
 
     //apply and update
     val obj = OperatorExample(1, 2)

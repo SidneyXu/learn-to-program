@@ -36,4 +36,16 @@ object ExprExample {
 
 
   }
+
+  //match pattern in try catch
+  def matchTryCatch: Unit = {
+    try {
+      throw new NullPointerException
+    } catch {
+      case e: NullPointerException => println("null object")
+      case e: IndexOutOfBoundsException => print("index out of bound")
+    } finally {
+      println("finish")
+    }
+  }
 }
