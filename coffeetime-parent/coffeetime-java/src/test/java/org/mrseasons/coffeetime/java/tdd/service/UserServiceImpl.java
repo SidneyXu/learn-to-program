@@ -1,9 +1,12 @@
-package org.mrseasons.coffeetime.java.tdd;
+package org.mrseasons.coffeetime.java.tdd.service;
+
+import org.mrseasons.coffeetime.java.tdd.User;
+import org.mrseasons.coffeetime.java.tdd.UserDao;
 
 /**
  * Created by mrseasons on 1/28/15.
  */
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
     private UserDao userDao;
 

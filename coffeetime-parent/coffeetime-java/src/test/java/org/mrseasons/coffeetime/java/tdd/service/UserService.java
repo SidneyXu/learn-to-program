@@ -1,4 +1,6 @@
-package org.mrseasons.coffeetime.java.tdd;
+package org.mrseasons.coffeetime.java.tdd.service;
+
+import org.mrseasons.coffeetime.java.tdd.User;
 
 /**
  * Created by mrseasons on 1/28/15.

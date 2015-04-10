@@ -26,6 +26,7 @@
         <maven-resources-plugin.version>2.7</maven-resources-plugin.version>
         <guava.version>17.0</guava.version>
         <mysql.version>5.1.34</mysql.version>
+        <akka-actor_2.11.version>2.3.9</akka-actor_2.11.version>
     </properties>
 
     <!--dependencyManagement-->
@@ -58,7 +59,11 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.typesafe.akka</groupId>
+                <artifactId>akka-actor_2.11</artifactId>
+                <version>${akka-actor_2.11.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
