@@ -21,7 +21,7 @@
         <project.build.encoding>UTF-8</project.build.encoding>
         <mockito.version>1.10.19</mockito.version>
         <jdk.version>1.8</jdk.version>
-        <junit.version>4.11</junit.version>
+        <junit.version>4.12</junit.version>
         <maven-compiler-plugin.verion>3.2</maven-compiler-plugin.verion>
         <maven-resources-plugin.version>2.7</maven-resources-plugin.version>
         <guava.version>17.0</guava.version>
@@ -44,11 +44,11 @@
                 <version>${mockito.version}</version>
                 <scope>test</scope>
             </dependency>
-            <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-core</artifactId>
-                <version>${jackson-core.version}</version>
-            </dependency>
+            <!--<dependency>-->
+                <!--<groupId>com.fasterxml.jackson.core</groupId>-->
+                <!--<artifactId>jackson-core</artifactId>-->
+                <!--<version>${jackson-core.version}</version>-->
+            <!--</dependency>-->
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>

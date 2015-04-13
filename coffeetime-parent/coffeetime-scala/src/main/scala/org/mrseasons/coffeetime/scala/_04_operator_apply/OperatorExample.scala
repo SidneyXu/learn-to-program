@@ -1,6 +1,7 @@
 package org.mrseasons.coffeetime.scala._04_operator_apply
 
 import scala.collection.mutable
+import scala.util.matching.Regex
 
 /**
  * Created by mrseasons on 2/25/15.
@@ -46,6 +47,11 @@ object OperatorExample {
       case _ => "other"
     }
     println(result) //10,20
+
+    //unapply in regex
+    "user@domain.com" match {
+      case Email(user, domain) => println(user + "@" + domain)
+    }
   }
 
   def apply(x: Int, y: Int) = new OperatorExample(x, y)
@@ -59,8 +65,17 @@ object OperatorExample {
     else
       Some(input.x * 10, input.y * 10)
   }
+
 }
 
 class OperatorExample(var x: Int, var y: Int) {
   override def toString: String = x + "+" + y;
+}
+
+object Email {
+  def unapply(str: String) = new Regex("""(.*)@(.*)""")
+    .unapplySeq(str).get match {
+    case user :: domain :: Nil => Some(user, domain)
+    case _ => None
+  }
 }

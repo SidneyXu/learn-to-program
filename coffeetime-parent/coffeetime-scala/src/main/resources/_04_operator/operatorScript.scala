@@ -20,6 +20,13 @@ class A {
     x * x
   }
 }
+
 //counter++   error
 counter += 1
+
+// "==" means equals
+val x = "x"
+val xx = "x"
+println(x == xx)
+
 
