@@ -8,7 +8,7 @@ import org.scalatest.junit.JUnitRunner
  * Created by mrseasons on 4/13/15.
  */
 @RunWith(classOf[JUnitRunner])
-class StringUtilsTest extends FunSuite with BeforeAndAfter{
+class StringUtilsTest extends FunSuite with BeforeAndAfter {
 
   test("splitCamelCase works on FooBarBaz") {
     val s = StringUtils.splitCamelCase("FooBarBaz")
@@ -25,6 +25,10 @@ class StringUtilsTest extends FunSuite with BeforeAndAfter{
       val s = StringUtils.splitCamelCase(null)
     }
     assert(e != null)
+  }
+
+  before {
+    println("before")
   }
 
 }

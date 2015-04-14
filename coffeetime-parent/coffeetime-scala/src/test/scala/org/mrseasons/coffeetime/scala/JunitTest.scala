@@ -5,7 +5,7 @@ import junit.framework.TestCase
 /**
  * Created by mrseasons on 4/13/15.
  */
-class Test01 extends TestCase{
+class JunitTest extends TestCase{
 
   def test01(): Unit ={
     println("abc")
