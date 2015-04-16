@@ -69,7 +69,28 @@ println(closeTo(1.2, 5)) //4.900999999999993
 //anonymous functions
 val aaa = (x: Int) => x + 1
 val bbb = {
-  def f(x: Int) = x + 1; f _
+  def f(x: Int) = x + 1;
+  f _
 }
 println(aaa(1))
 println(bbb(3))
+
+
+
+//call-by-name
+def sum(x: Double, y: Double) = square(x) + square(y)
+
+def square(x: Double) = x * x
+println(sum(3, 2 + 2)) //25.0
+
+//call-by-value
+def sum2(x: Double, y: => Double) = square(x) + square(y)
+println(sum2(3, 2 + 2)) //25.0
+
+//difference between call-by-name and call-by-value
+def loop: Int = loop * 1
+def constOne(x: Int, y: => Int) = 1
+
+println(constOne(1, loop)) //1
+//println(constOne(loop, 1))  //loop forever
+
