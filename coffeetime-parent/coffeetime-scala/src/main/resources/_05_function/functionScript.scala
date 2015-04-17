@@ -2,7 +2,7 @@
 val add = (x: Int) => x + 1
 
 /**
- * Created by mrseasons on 2/9/15.
+ * Created by mrseasons on 2015/2/9.
  */
 
 //block and function

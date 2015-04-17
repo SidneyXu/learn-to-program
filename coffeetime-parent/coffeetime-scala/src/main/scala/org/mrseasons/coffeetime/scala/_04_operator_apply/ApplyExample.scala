@@ -4,46 +4,31 @@ import scala.collection.mutable
 import scala.util.matching.Regex
 
 /**
- * Created by mrseasons on 2/25/15.
+ * Created by mrseasons on 2015/2/25.
  */
-object OperatorExample {
+object ApplyExample {
 
   def main(args: Array[String]) {
-    //Identifier
-    val ! = 1
-//    val `val` = 2
-
-    //Infix Operator
-    1 to 10
-    1.to(10)
-    1 -> 10
-    1.->(10)
-//    1 + 10
-//    1.+(10)
-
-    //Unary Operator
-//    1 toString
-
-//    1.toString()
-
-//    -1
-//    1.unary_-
 
     //apply and update
-    val obj = OperatorExample(1, 2)
+    //use for making instance
+    val obj = ApplyExample(1, 2)
     println(obj) //1+2
-    OperatorExample(2, 3) = 4 //(2,3,4)
+    ApplyExample(2, 3) = 4 //(2,3,4)
 
+    //use for container
     val scores = new mutable.HashMap[String, Int]()
     scores("Bob") = 100 //actually invoke scores.update("Bob,100)
     val bob = scores("Bob") //actually invoke scores.apply("Bob")
 
+
     //unapply
-    val OperatorExample(a, b) = OperatorExample(1, 2)
+    val ApplyExample(a, b) = ApplyExample(1, 2)
     println()
+
     val result = obj match {
-      case OperatorExample(1, 2) => "one"
-      case OperatorExample(a, b) => a + "," + b
+      case ApplyExample(1, 2) => "one"
+      case ApplyExample(a, b) => a + "," + b
       case _ => "other"
     }
     println(result) //10,20
@@ -54,12 +39,12 @@ object OperatorExample {
     }
   }
 
-  def apply(x: Int, y: Int) = new OperatorExample(x, y)
+  def apply(x: Int, y: Int) = new ApplyExample(x, y)
 
   def update(x: Int, y: Int, z: Int) = println(x, y, z)
 
   //use to extract value or return boolean
-  def unapply(input: OperatorExample) = {
+  def unapply(input: ApplyExample) = {
     if (input.x < 0)
       None
     else
@@ -68,12 +53,12 @@ object OperatorExample {
 
 }
 
-class OperatorExample(var x: Int, var y: Int) {
-  override def toString: String = x + "+" + y;
+class ApplyExample(var x: Int, var y: Int) {
+  override def toString: String = x + "+" + y
 }
 
 object Email {
-  def unapply(str: String) = new Regex("""(.*)@(.*)""")
+  def unapply(str: String) = new Regex( """(.*)@(.*)""")
     .unapplySeq(str).get match {
     case user :: domain :: Nil => Some(user, domain)
     case _ => None
