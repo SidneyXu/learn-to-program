@@ -16,7 +16,6 @@ val y = if (2 > 1) {
 println(x, x.getClass) //(),void
 println(y, y.getClass) //1,int
 
-val a = 10
 var b = 0
-val c = b = a
-println(a, b, c) //10,10,()
+val c = b = 10
+println(b, c) //10,()

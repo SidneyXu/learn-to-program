@@ -1,20 +1,21 @@
+import scala.annotation.tailrec
+
 /**
- * Created by mrseasons on 4/13/15.
+ * Created by mrseasons on 2015/4/13.
  */
-
-val file = List("warn 2013 msg", "warn 2012 msg",
-  "error 2013 msg", "warn 2013 msg")
-
-def wordcount(str: String): Int = str.split(" ").count("msg" == _)
-
-def foldLeft(list: List[Int])(init: Int)(f: (Int, Int) => Int): Int = {
-  list match {
-    case List() => init
-    case head :: tail => foldLeft(tail)(f(init, head))(f)
-  }
+//recursion
+def factorial(n: Int): Int = {
+  if (n <= 1) 1
+  else n * factorial(n - 1)
 }
+factorial(5)
 
-val num = foldLeft(file.map(wordcount))(0)(_ + _)
+//tail recursion
+def factorialTail(n: Int): Int = {
+  @tailrec
+  def loop(acc: Int, n: Int): Int =
+    if (n == 0) acc else loop(n * acc, n - 1)
 
-println("wordcount:" + num) //wordcount:4
-
+  loop(1, n)
+}
+factorialTail(5)

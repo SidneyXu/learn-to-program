@@ -1,46 +1,42 @@
-//anonymous function
-val add = (x: Int) => x + 1
-
 /**
  * Created by mrseasons on 2015/2/9.
  */
 
-//block and function
 //define functions
 def addOne(m: Int): Int = m + 1
-
 def addTwo(m: Int): Int = {
   m + 2
 }
 
+
+//call functions
+//function contains ()
 def five: Int = {
   val x = 2 + 3
   val y = 3 + 2
   x + y
 }
-
-//call functions
-//println(five()) error
+//println(five())   //error
 println(five)
-println(six)
-println(six())
 
+//function not contains ()
 def six(): Int = {
   val x = 2 + 3
   val y = 3 + 2
   x + y
 }
-println(decorate("abc")) //[abc]
-println(decorate("abc", right = ">")) //[abc>
+println(six)
+println(six())
+
 
 //default arguments and arguments with specified names
+//default arguments
 def decorate(str: String, left: String = "[", right: String = "]") = left + str + right
-println(capitalizeAll("abc", "def")) //ArrayBuffer(Abc, Def)
-println(capitalizeAll("abc")) //ArrayBuffer(Abc)
-println(capitalizeAll()) //List()
+println(decorate("abc")) //[abc]
 
-//println(capitalizeAll("a" to "c"))	//error
-//println(capitalizeAll("a" to "c": _*)   ???
+// parameters with specified names
+println(decorate("abc", right = ">")) //[abc>
+
 
 //varargs
 def capitalizeAll(args: String*) = {
@@ -48,7 +44,32 @@ def capitalizeAll(args: String*) = {
     arg.capitalize
   }
 }
+println(capitalizeAll("abc", "def")) //ArrayBuffer(Abc, Def)
+println(capitalizeAll("abc")) //ArrayBuffer(Abc)
+println(capitalizeAll()) //List()
+
+//use list as varargs
+def list = List("abc", "zxc")
+println(capitalizeAll(list: _*)) //List(Abc, Zxc)
+
+
+//sub
+def box(s: String) {
+  println(s)
+}
+box("abc")
+
+
+//anonymous function
+val add = (x: Int) => x + 1
 println(add(3)) //4
+
+val addOri = {
+  def f(x: Int) = x + 1
+  f _
+}
+println(addOri(5)) //6
+
 
 //Nested Functions
 def closeTo(src: Double, target: Int): Double = {
@@ -66,17 +87,8 @@ def closeTo(src: Double, target: Int): Double = {
 }
 println(closeTo(1.2, 5)) //4.900999999999993
 
-//anonymous functions
-val aaa = (x: Int) => x + 1
-val bbb = {
-  def f(x: Int) = x + 1;
-  f _
-}
-println(aaa(1))
-println(bbb(3))
 
-
-
+//pass parameters
 //call-by-name
 def sum(x: Double, y: Double) = square(x) + square(y)
 
