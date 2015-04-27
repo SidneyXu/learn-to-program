@@ -1,13 +1,31 @@
 package org.mrseasons.coffeetime.scala._09_collection
 
+import scala.collection.mutable
+
 /**
- * Created by mrseasons on 3/3/15.
+ * Created by mrseasons on 2015/3/3.
  */
 object CollectionExample {
 
   def main(args: Array[String]) {
-    var digits = List(1, 2, 3)
+    //Define
+    val digits = List(1, 2, 3)
     println(digits) //List(1, 2, 3)
+
+
+    //Empty List
+    val empty = List()
+    println(empty == Nil) //true
+
+
+    //List constructors
+    //A :: B :: C is interpreted as A :: (B :: C)
+    val newDigits = 5 :: digits
+    println(digits) //List(1, 2)
+    println(newDigits) //List(5, 1, 2)
+    //error
+    //    val newDigits2= digits :: 5
+
 
     //Basic Operations
     println(digits.head) //1
@@ -15,16 +33,8 @@ object CollectionExample {
     println(digits.tail.head) //2
     println(digits.sum) //6
 
-    val empty = List()
-    println(empty == Nil) //true
 
-    //List constructors
-    //A :: B :: C is interpreted as A :: (B :: C)
-    val newDigits = 5 :: digits
-    println(digits) //List(1, 2)
-    println(newDigits) //List(5, 1, 2)
-
-    //List Pattern
+    //List Case Pattern
     //In fact, :: is defined as a case class
     def isort(xs: List[Int]): List[Int] = xs match {
       case List() => List()
@@ -42,8 +52,9 @@ object CollectionExample {
     println("newNumbers", newNumbers) //(newNumbers,List(1, 3, 5, 9))
 
 
-    val list = scala.collection.mutable.MutableList
-
-
+    //MutableList
+    var list = new mutable.MutableList[Int]
+    list +=(2, 3, 5)
+    println(list(1))
   }
 }
