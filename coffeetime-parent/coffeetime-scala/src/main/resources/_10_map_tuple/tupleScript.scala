@@ -1,5 +1,5 @@
 /**
- * Created by mrseasons on 2/12/15.
+ * Created by mrseasons on 2015/2/12.
  */
 val tuple = (1, 3.14, "Hello World")
 println(tuple.getClass) //class scala.Tuple3
