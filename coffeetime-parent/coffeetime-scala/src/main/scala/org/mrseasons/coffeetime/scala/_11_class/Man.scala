@@ -1,18 +1,16 @@
 package org.mrseasons.coffeetime.scala._12_class
 
-import java.util.Date
-
 /**
- * Created by mrseasons on 2/12/15.
+ * Created by mrseasons on 2015/2/12.
  */
 //main constructor
 class Man(val name: String, val age: Int, private var from: String = "USA", description: String = "none") {
 
   println("sentences in main constructor")
 
-  //constructors
   //slave constructor
   def this(name: String) {
+    //invoke main constructor
     this(name, 0)
   }
 
@@ -20,7 +18,7 @@ class Man(val name: String, val age: Int, private var from: String = "USA", desc
     this("Default Name", age)
   }
 
-  def this(){
+  def this() {
     this("Default Name")
   }
 

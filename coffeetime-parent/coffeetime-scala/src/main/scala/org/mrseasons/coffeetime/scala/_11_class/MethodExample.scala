@@ -1,11 +1,12 @@
 package org.mrseasons.coffeetime.scala._12_class
 
 /**
- * Created by mrseasons on 4/7/15.
+ * Created by mrseasons on 2015/4/7.
  */
 object MethodExample {
 
   def main(args: Array[String]) {
+    //Method and Function
     val c = new C
     println(c.methodInc) //()
     println(c.acc) //1

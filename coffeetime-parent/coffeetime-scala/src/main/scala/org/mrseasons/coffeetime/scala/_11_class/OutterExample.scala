@@ -1,11 +1,12 @@
 package org.mrseasons.coffeetime.scala._12_class
 
 /**
- * Created by mrseasons on 2/13/15.
+ * Created by mrseasons on 2015/2/13.
  */
 object OutterExample {
 
   def main(args: Array[String]) {
+    //construct instance of inner class
     val outter1 = new Outter
     val outter2 = new Outter
     val inner1 = new outter1.Inner("Outter1")

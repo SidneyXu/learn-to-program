@@ -1,7 +1,7 @@
 package org.mrseasons.coffeetime.scala._12_class
 
 /**
- * Created by mrseasons on 2/12/15.
+ * Created by mrseasons on 2015/2/12.
  */
 object MyBeanExample {
   def main(args: Array[String]) {
