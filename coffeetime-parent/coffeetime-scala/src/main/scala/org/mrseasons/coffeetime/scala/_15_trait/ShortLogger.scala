@@ -1,7 +1,7 @@
 package org.mrseasons.coffeetime.scala._15_trait
 
 /**
- * Created by mrseasons on 2/16/15.
+ * Created by mrseasons on 2015/05/03.
  */
 trait ShortLogger extends Logger {
   val maxLength = 15

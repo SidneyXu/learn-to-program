@@ -1,20 +1,25 @@
 package org.mrseasons.coffeetime.scala._15_trait
 
 /**
- * Created by mrseasons on 2/16/15.
+ * Created by mrseasons on 2015/05/03.
  */
 trait Logger {
+  //field
+  val minLength: Int
+
+  //method
   //trait can has abstract methods and normal methods
-  def log(msg: String)
-
-  val minLength:Int
-
+  //normal method
   def echo(msg: String) {
     println(msg)
   }
 
   def show(msg: String) {}
 
+  //abstract method
+  def log(msg: String)
+
+  //depends on abstract method
   def info(msg: String) {
     log("[INFO]" + msg)
   }

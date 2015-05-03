@@ -1,10 +1,11 @@
 package org.mrseasons.coffeetime.scala._13_package
 
+//import
 import org.mrseasons.coffeetime.scala._13_package.A.B.C.{D2, D}
 import java.awt.{Color,Font}
 import java.util.{HashMap=>JavaHashMap}
-import java.util._
 
+// create a package
 package A {
   package B {
 
@@ -29,8 +30,10 @@ package A {
 
 }
 
+//package chain
 package A.B.C {
 
+  //import
   import org.mrseasons.coffeetime.scala._13_package.A.B.B
 
   class D2 {
@@ -40,6 +43,7 @@ package A.B.C {
     def print = println("D2")
     b.print
 
+    //package visibility
     private[C] def desc = "desc"
 
     private[B] def impress = "impress"
@@ -47,12 +51,13 @@ package A.B.C {
 
 }
 
+//package object
 package object people {
   val defaultName = "Default Name"
 }
 
 /**
- * Created by mrseasons on 2/15/15.
+ * Created by mrseasons on 2015/2/15.
  */
 object PackageExample {
 

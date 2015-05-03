@@ -1,7 +1,7 @@
 package org.mrseasons.coffeetime.scala._14_inherit
 
 /**
- * Created by mrseasons on 4/7/15.
+ * Created by mrseasons on 2015/05/01.
  */
 object DuckExample {
 

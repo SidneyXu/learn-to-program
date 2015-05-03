@@ -1,21 +1,21 @@
 package org.mrseasons.coffeetime.scala._14_inherit
 
 /**
- * Created by mrseasons on 2/15/15.
+ * Created by mrseasons on 2015/05/01.
  */
 object PersonExample {
 
   def main(args: Array[String]) {
-    def person = new Person("Jane")
-    println(person) //Person[name=Jane]
+    def person = new Person("Jane")//Person[name=Jane]
+    def emp1 = new Employee("Jane", 30)//Employee[name=Jane][salary=30]
 
-    def emp1 = new Employee("Jane", 30)
-    println(emp1) //Employee[name=Jane][salary=30]
-
+    //type check
     if (emp1.isInstanceOf[Person]) {
+      //type conversion
       val e = emp1.asInstanceOf[Person]
       println(e) //Employee[name=Jane][salary=30]
     }
+    //type check without subclass
     if (emp1.getClass == classOf[Person]) {
       println("is Person.class")
     } else {
@@ -30,6 +30,7 @@ object PersonExample {
     println(emp1.idf)
     println(emp1.idf2)
 
+    //antonymous sub class
     val anonymousPerson = new Person("Tom") {
       def greeting = "hello world"
     }
