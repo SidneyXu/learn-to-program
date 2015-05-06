@@ -1,13 +1,9 @@
 package org.mrseasons.coffeetime.scala._16_case_class_match_pattern
 
 /**
- * Created by mrseasons on 3/11/15.
+ * Created by mrseasons on 2015/05/06.
  */
 object MatchExample {
-
-  def main(args: Array[String]): Unit = {
-
-  }
 
   def matchValue: Unit = {
     val times = 1
@@ -36,4 +32,40 @@ object MatchExample {
       case _ => "other"
     }
   }
+
+  //match pattern in try catch
+  def matchTryCatch: Unit = {
+    try {
+      throw new NullPointerException
+    } catch {
+      case e: NullPointerException => println("null object")
+      case e: IndexOutOfBoundsException => print("index out of bound")
+    } finally {
+      println("finish")
+    }
+  }
+
+  def matchTryCatchFaceExp: Unit = {
+    val result: Unit = try {
+      throw new IndexOutOfBoundsException
+    } catch {
+      case e: NullPointerException => println("null object")
+      case e: IndexOutOfBoundsException => print("index out of bound")
+    } finally {
+      println("finish")
+    }
+  }
+
+  def matchCaseClass: Unit = {
+    def eval(e: Expr): Int = e match {
+      case Number(n) => n
+      case Sum(l, r) => eval(l) + eval(r)
+      case x => x.eval * 10
+    }
+    println(eval(Sum(Number(1), Number(2)))) //3
+    println(eval(new Expr {
+      override def eval: Int = 20
+    })) //200
+  }
+
 }
