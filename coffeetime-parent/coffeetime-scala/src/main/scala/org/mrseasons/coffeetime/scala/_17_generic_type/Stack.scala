@@ -1,8 +1,9 @@
 package org.mrseasons.coffeetime.scala._17_generic_type
 
 /**
- * Created by mrseasons on 3/12/15.
+ * Created by mrseasons on 2015/05/08.
  */
+//define generic type
 abstract class Stack[A] {
   def push(x: A): Stack[A] = new NonEmptyStack[A](x, this)
 

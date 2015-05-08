@@ -1,14 +1,12 @@
 package org.mrseasons.coffeetime.scala._17_generic_type
 
-import java.util.Date
-
 /**
- * Created by mrseasons on 3/20/15.
+ * Created by mrseasons on 2015/05/08.
  */
 object HolderExample {
 
   def main(args: Array[String]) {
-    //default
+    //---default, without covariant---
     var strHolder = new Holder[String]("a");
     var intHolder = new Holder[Int](3)
     strHolder.info //a
@@ -17,23 +15,24 @@ object HolderExample {
     var anyHolder = new Holder[AnyRef]("b")
     anyHolder.info //b
 
+    //wrong, Holder[String] isn't the subclass of Holder[AnyRef] by default
     //    anyHolder=intHolder
     //    anyHolder=strHolder
 
-    //using co-variant
-    var strCo = new CoHolder[String]("a")
-    var intCo = new CoHolder[Int](3)
-    var anyCo = new CoHolder[AnyRef]("b")
+    //---using co-variant----
+    var strCo = new CovariantHolder[String]("a")
+    var intCo = new CovariantHolder[Int](3)
+    var anyCo = new CovariantHolder[AnyRef]("b")
 
-    //wrong
+    //wrong, Int isn't the subclass of AnyRef
     //    anyCo=intCo
     anyCo = strCo
     anyCo.info //a
 
-    //using contravariant
-    var strDCo = new DcoHolder[String]("a")
-    var intDCo = new DcoHolder[Int](3)
-    var anyDCo = new DcoHolder[AnyRef]("b")
+    //---using contravariant---
+    var strDCo = new ContravarintHolder[String]("a")
+    var intDCo = new ContravarintHolder[Int](3)
+    var anyDCo = new ContravarintHolder[AnyRef]("b")
 
     //    wrong
     //    anyDCo = strDCo
