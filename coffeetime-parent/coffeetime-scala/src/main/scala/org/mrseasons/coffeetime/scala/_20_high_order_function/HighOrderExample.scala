@@ -6,7 +6,7 @@ import javax.swing.JButton
 import scala.math._
 
 /**
- * Created by mrseasons on 3/2/15.
+ * Created by mrseasons on 2015/05/11.
  */
 object HighOrderExample {
 

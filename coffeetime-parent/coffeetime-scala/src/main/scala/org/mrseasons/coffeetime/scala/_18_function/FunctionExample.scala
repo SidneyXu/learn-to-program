@@ -1,7 +1,7 @@
 package org.mrseasons.coffeetime.scala._18_tuple_function
 
 /**
- * Created by mrseasons on 3/20/15.
+ * Created by mrseasons on 2015/05/09.
  */
 object FunctionExample {
 

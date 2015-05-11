@@ -1,7 +1,7 @@
 package org.mrseasons.coffeetime.scala._19_regex
 
 /**
- * Created by mrseasons on 2/16/15.
+ * Created by mrseasons on 2015/05/10.
  */
 object RegexExample {
 
