@@ -1,19 +1,13 @@
 package org.mrseasons.coffeetime.scala._22_io
 
-import java.io.File
-
-import scala.io.{StdIn, Source}
+import scala.io.{Source, StdIn}
 
 /**
- * Created by mrseasons on 2/16/15.
+ * Created by mrseasons on 2015/05/14.
  */
-object ReadFileExample {
+object ReadFileExample extends App {
 
-  def main(args: Array[String]) {
-
-  }
-
-  def readline() {
+  def readLine() {
     var source = Source.fromFile("coffeetime-scala/myfile.txt", "UTF-8")
     val lineIterator = source.getLines()
     for (l <- lineIterator) {
@@ -45,10 +39,15 @@ object ReadFileExample {
     println(result)
   }
 
-  def readOther(): Unit = {
-    val source1 = Source.fromURL("http://www.baidu.com")
-    val source2 = Source.fromString("hello world")
+  def readUrl(): Unit = {
+    val source1 = Source.fromURL("http://www.stackoverflow.com", "UTF-8")
     println(source1.mkString)
+    source1.close()
+  }
+
+  def readString(): Unit = {
+    val source2 = Source.fromString("hello world")
     println(source2.mkString)
+    source2.close()
   }
 }

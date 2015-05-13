@@ -6,7 +6,7 @@ import sys.process._
 import java.io.File
 
 /**
- * Created by mrseasons on 2/16/15.
+ * Created by mrseasons on 2015/05/14.
  */
 object ShellExample {
 
@@ -24,6 +24,6 @@ object ShellExample {
 
     "grep sec" #< new File("outputs.txt") !
 
-    "grep scala" #< new URL("http://www.baidu.com") !
+    "grep scala" #< new URL("http://www.stackoverflow.com") !
   }
 }

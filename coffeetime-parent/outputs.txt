@@ -1,16 +1,12 @@
-total 40
-drwxr-xr-x   7 sidneyy  staff    238 Jan 27 17:29 .
-drwxr-xr-x   7 sidneyy  staff    238 Jan 26 12:58 ..
--rw-r--r--@  1 sidneyy  staff  12292 Feb 16 10:26 .DS_Store
-drwxr-xr-x  17 sidneyy  staff    578 Feb 16 10:29 .git
--rw-r--r--@  1 sidneyy  staff    777 Jan 21 17:28 .gitignore
-drwxr-xr-x  13 sidneyy  staff    442 Feb 16 10:28 coffeetime-parent
-drwxr-xr-x  16 sidneyy  staff    544 Jan 27 17:27 step_into_scala
-total 40
-drwxr-xr-x   7 sidneyy  staff    238 Jan 27 17:29 .
-drwxr-xr-x   7 sidneyy  staff    238 Jan 26 12:58 ..
--rw-r--r--@  1 sidneyy  staff  12292 Feb 16 10:26 .DS_Store
-drwxr-xr-x  17 sidneyy  staff    578 Feb 16 10:29 .git
--rw-r--r--@  1 sidneyy  staff    777 Jan 21 17:28 .gitignore
-drwxr-xr-x  13 sidneyy  staff    442 Feb 16 10:28 coffeetime-parent
-drwxr-xr-x  16 sidneyy  staff    544 Jan 27 17:27 step_into_scala
+total 28
+drwx------+ 1 Administrators None   0 Feb 22 19:14 .
+drwx------+ 1 Administrators None   0 Apr 25 22:21 ..
+drwx------+ 1 Administrators None   0 May 14 07:54 .git
+-rwx------+ 1 Administrators None 842 Jan 21 21:27 .gitignore
+drwx------+ 1 Administrators None   0 Apr 16 22:14 coffeetime-parent
+total 28
+drwx------+ 1 Administrators None   0 Feb 22 19:14 .
+drwx------+ 1 Administrators None   0 Apr 25 22:21 ..
+drwx------+ 1 Administrators None   0 May 14 07:54 .git
+-rwx------+ 1 Administrators None 842 Jan 21 21:27 .gitignore
+drwx------+ 1 Administrators None   0 Apr 16 22:14 coffeetime-parent
