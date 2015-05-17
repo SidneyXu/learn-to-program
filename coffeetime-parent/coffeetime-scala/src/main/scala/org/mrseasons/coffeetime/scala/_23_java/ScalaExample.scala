@@ -1,7 +1,7 @@
-package org.mrseasons.coffeetime.scala._24_java
+package org.mrseasons.coffeetime.scala._23_java
 
 /**
- * Created by mrseasons on 4/13/15.
+ * Created by mrseasons on 2015/05/16.
  */
 object ScalaExample {
 
