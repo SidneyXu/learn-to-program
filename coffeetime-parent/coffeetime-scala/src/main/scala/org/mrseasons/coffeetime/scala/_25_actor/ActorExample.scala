@@ -8,13 +8,11 @@ import akka.testkit.CallingThreadDispatcher
 import akka.pattern.ask
 
 /**
- * Created by mrseasons on 4/9/15.
+ * Created by mrseasons on 2015/05/19.
  */
-object ActorExample {
+object ActorExample extends App {
 
-  def main(args: Array[String]) {
-    testParallelWordCount()
-  }
+  testEchoServerUsingDSL()
 
   def testEchoServer(): Unit = {
     //Creating Actors with default constructor
@@ -33,7 +31,9 @@ object ActorExample {
       become {
         case msg => println("echo " + msg)
       }
-
+      whenStarting {
+        println("preStart")
+      }
     })
     echoServer ! "hi"
     system.shutdown
@@ -85,7 +85,7 @@ object ActorExample {
       }
     })
 
-    val version = fromURL.ask(versionUrl)(akka.util.Timeout(5 , TimeUnit.SECONDS))
+    val version = fromURL.ask(versionUrl)(akka.util.Timeout(5, TimeUnit.SECONDS))
     version onComplete {
       case msg => println(msg); system.shutdown
     }
@@ -93,7 +93,7 @@ object ActorExample {
     println("=================================")
   }
 
-  def testParallelProcessCollection(): Unit ={
+  def testParallelProcessCollection(): Unit = {
 
     val urls = List("http://scala-lang.org",
       "https://github.com/SidneyXu")
@@ -103,11 +103,11 @@ object ActorExample {
 
     val t = System.currentTimeMillis()
     urls.map(fromURL(_))
-//    urls.par.map(fromURL(_))
+    //    urls.par.map(fromURL(_))
     println("time: " + (System.currentTimeMillis - t) + "ms")
   }
 
-  def testParallelWordCount(): Unit ={
+  def testParallelWordCount(): Unit = {
     val file = List("warn 2013 msg", "warn 2012 msg",
       "error 2013 msg", "warn 2013 msg")
 

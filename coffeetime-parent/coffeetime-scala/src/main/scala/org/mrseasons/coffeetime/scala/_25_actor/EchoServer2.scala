@@ -1,9 +1,8 @@
 package org.mrseasons.coffeetime.scala._27_actor
 
 /**
- * Created by mrseasons on 4/9/15.
+ * Created by mrseasons on 2015/05/19.
  */
-
 import akka.actor.Actor
 
 class EchoServer2(name:String) extends Actor {
