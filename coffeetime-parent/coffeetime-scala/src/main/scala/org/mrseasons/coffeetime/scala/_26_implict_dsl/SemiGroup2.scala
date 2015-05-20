@@ -1,7 +1,7 @@
 package org.mrseasons.coffeetime.scala._28_implict_dsl
 
 /**
- * Created by mrseasons on 3/27/15.
+ * Created by mrseasons on 2015/05/20.
  */
 abstract class SemiGroup2[A] {
   def add(x: A, y: A): A
@@ -29,11 +29,11 @@ object SemiGroup {
 
   def main(args: Array[String]) {
     println(sum(List("a", "bc", "def"))(stringMonoid))
-    sum(List(1, 2, 3))(intMonoid)
+    println(sum(List(1, 2, 3))(intMonoid))
 
     println(sum(List("a", "bc", "def")))
 
-
+    println(int2ordered(1).compare(3))
   }
 
   def acquire[A](x: A)(a: Monoid2[A]): A = {
@@ -43,10 +43,12 @@ object SemiGroup {
 
   }
 
-  def sum[A](xs: List[A])(implicit m: Monoid2[A]): A = if (xs.isEmpty) m.unit
-  else m.add(xs.head, sum(xs.tail))
+  //define implicit parameters
+  def sum[A](xs: List[A])(implicit m: Monoid2[A]): A =
+    if (xs.isEmpty) m.unit
+    else m.add(xs.head, sum(xs.tail))
 
-
+  //define implicit conversation
   implicit def int2ordered(x: Int): Ordered[Int] = new Ordered[Int] {
     def compare(y: Int): Int =
       if (x < y) -1 else if (x > y) 1 else 0

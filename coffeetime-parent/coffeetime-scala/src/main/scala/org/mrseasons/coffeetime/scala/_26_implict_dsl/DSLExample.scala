@@ -1,4 +1,4 @@
-package org.mrseasons.coffeetime.scala._28_implict_dsl
+package org.mrseasons.coffeetime.scala._26_implict_dsl
 
 import java.util.Date
 
@@ -6,7 +6,7 @@ import org.json4s.JsonDSL._
 import org.json4s.jackson.JsonMethods._
 
 /**
- * Created by mrseasons on 4/13/15.
+ * Created by mrseasons on 2015/05/20.
  */
 object DSLExample {
 
