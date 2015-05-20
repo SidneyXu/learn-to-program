@@ -1,10 +1,10 @@
-package org.mrseasons.coffeetime.scala._27_actor
+package org.mrseasons.coffeetime.scala._25_actor
 
 /**
  * Created by mrseasons on 2015/05/19.
  */
 
-import akka.actor.{Actor, ActorSystem, Props}
+import akka.actor.Actor
 
 //define an actor
 class EchoServer extends Actor {

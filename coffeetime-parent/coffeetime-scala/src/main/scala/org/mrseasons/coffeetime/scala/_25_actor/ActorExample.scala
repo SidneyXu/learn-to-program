@@ -1,18 +1,16 @@
-package org.mrseasons.coffeetime.scala._27_actor
+package org.mrseasons.coffeetime.scala._25_actor
 
 import java.util.concurrent.TimeUnit
 
-import akka.actor.{Props, ActorSystem}
 import akka.actor.ActorDSL._
-import akka.testkit.CallingThreadDispatcher
+import akka.actor.{ActorSystem, Props}
 import akka.pattern.ask
+import akka.testkit.CallingThreadDispatcher
 
 /**
  * Created by mrseasons on 2015/05/19.
  */
 object ActorExample extends App {
-
-  testEchoServerUsingDSL()
 
   def testEchoServer(): Unit = {
     //Creating Actors with default constructor
@@ -59,6 +57,7 @@ object ActorExample extends App {
 
     val fromURL = actor(new Act {
       become {
+
         case url: String => sender ! scala.io.Source.fromURL(url)
           .getLines().mkString("\n")
       }
@@ -66,8 +65,6 @@ object ActorExample extends App {
 
     val version = fromURL.ask(versionUrl)(akka.util.Timeout(5, TimeUnit.SECONDS))
     version.foreach(println _)
-
-    println("=================================")
 
     system.shutdown
   }
@@ -90,7 +87,6 @@ object ActorExample extends App {
       case msg => println(msg); system.shutdown
     }
 
-    println("=================================")
   }
 
   def testParallelProcessCollection(): Unit = {
@@ -102,8 +98,9 @@ object ActorExample extends App {
       .getLines().mkString("\n")
 
     val t = System.currentTimeMillis()
-    urls.map(fromURL(_))
-    //    urls.par.map(fromURL(_))
+//    urls.map(fromURL(_))
+        urls.par.map(fromURL)
+
     println("time: " + (System.currentTimeMillis - t) + "ms")
   }
 

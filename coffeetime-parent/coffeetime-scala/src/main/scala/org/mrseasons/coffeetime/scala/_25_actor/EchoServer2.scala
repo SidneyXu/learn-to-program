@@ -1,4 +1,4 @@
-package org.mrseasons.coffeetime.scala._27_actor
+package org.mrseasons.coffeetime.scala._25_actor
 
 /**
  * Created by mrseasons on 2015/05/19.
