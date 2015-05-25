@@ -3,7 +3,7 @@ package org.mrseasons.coffeetime.scala._34_other
 import scala.collection.mutable
 
 /**
- * Created by mrseasons on 4/13/15.
+ * Created by mrseasons on 2015/05/25.
  */
 object MemoryExample {
 
