@@ -5,6 +5,8 @@ import java.util.Date
 import org.json4s.JsonDSL._
 import org.json4s.jackson.JsonMethods._
 
+import scala.io.Source
+
 /**
  * Created by mrseasons on 2015/05/20.
  */

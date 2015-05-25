@@ -1,8 +1,8 @@
 package org.mrseasons.coffeetime.scala
 
 /**
- * Created by mrseasons on 4/13/15.
- */
+*  Created by mrseasons on 2015/05/25.
+*/
 object StringUtils {
 
   def splitCamelCase(s: String): String = {

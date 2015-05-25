@@ -5,7 +5,7 @@ import org.scalatest.{BeforeAndAfter, FunSuite}
 import org.scalatest.junit.JUnitRunner
 
 /**
- * Created by mrseasons on 4/13/15.
+ * Created by mrseasons on 2015/05/25.
  */
 @RunWith(classOf[JUnitRunner])
 class StringUtilsTest extends FunSuite with BeforeAndAfter {
