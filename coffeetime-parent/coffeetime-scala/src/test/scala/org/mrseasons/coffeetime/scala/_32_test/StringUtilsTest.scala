@@ -1,6 +1,7 @@
 package org.mrseasons.coffeetime.scala
 
 import org.junit.runner.RunWith
+import org.mrseasons.coffeetime.scala._32_test.StringUtils
 import org.scalatest.{BeforeAndAfter, FunSuite}
 import org.scalatest.junit.JUnitRunner
 

@@ -1,8 +1,8 @@
-package org.mrseasons.coffeetime.scala
+package org.mrseasons.coffeetime.scala._32_test;
 
 /**
-*  Created by mrseasons on 2015/05/25.
-*/
+ * Created by mrseasons on 4/13/15.
+ */
 object StringUtils {
 
   def splitCamelCase(s: String): String = {
