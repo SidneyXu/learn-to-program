@@ -17,36 +17,36 @@
     <url>http://maven.apache.org</url>
 
     <properties>
-        <kotlin.version>0.10.195</kotlin.version>
+        <kotlin.version>0.1-SNAPSHOT</kotlin.version>
     </properties>
 
-    <!--<repositories>-->
-        <!--<repository>-->
-            <!--<id>sonatype.oss.snapshots</id>-->
-            <!--<name>Sonatype OSS Snapshot Repository</name>-->
-            <!--<url>http://oss.sonatype.org/content/repositories/snapshots</url>-->
-            <!--<releases>-->
-                <!--<enabled>false</enabled>-->
-            <!--</releases>-->
-            <!--<snapshots>-->
-                <!--<enabled>true</enabled>-->
-            <!--</snapshots>-->
-        <!--</repository>-->
-    <!--</repositories>-->
+    <repositories>
+        <repository>
+            <id>sonatype.oss.snapshots</id>
+            <name>Sonatype OSS Snapshot Repository</name>
+            <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
-    <!--<pluginRepositories>-->
-        <!--<pluginRepository>-->
-            <!--<id>sonatype.oss.snapshots</id>-->
-            <!--<name>Sonatype OSS Snapshot Repository</name>-->
-            <!--<url>http://oss.sonatype.org/content/repositories/snapshots</url>-->
-            <!--<releases>-->
-                <!--<enabled>false</enabled>-->
-            <!--</releases>-->
-            <!--<snapshots>-->
-                <!--<enabled>true</enabled>-->
-            <!--</snapshots>-->
-        <!--</pluginRepository>-->
-    <!--</pluginRepositories>-->
+    <pluginRepositories>
+        <pluginRepository>
+            <id>sonatype.oss.snapshots</id>
+            <name>Sonatype OSS Snapshot Repository</name>
+            <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 
 
     <dependencies>
@@ -90,11 +90,9 @@
                 </executions>
             </plugin>
         </plugins>
-    </build>
 
-    <!--<build>-->
-        <!--<sourceDirectory>src/main/kotlin</sourceDirectory>-->
-        <!--<testSourceDirectory>src/test/kotlin</testSourceDirectory>-->
-    <!--</build>-->
+        <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
+        <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
+    </build>
 
 </project>
