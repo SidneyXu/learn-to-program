@@ -6,7 +6,11 @@ package org.mrseasons.coffeetime.kotlin._06_flow_control
 fun main(args: Array<String>) {
     testIf()
 
+    testFor()
 
+    testWhile()
+
+    testRange()
 }
 
 private fun testIf() {
@@ -25,18 +29,43 @@ private fun testIf() {
     println(s3.javaClass)   //  kotlin.Unit
 }
 
-//private fun testFor(){
-//    for(i in
-//    println(i)
-//}
+private fun testFor() {
+    val arr = intArrayOf(1, 2, 3)
+    for ( a in arr) {
+        println(a)
+    }
+
+    for (i in arr.indices) {
+        println(arr[i])
+    }
+}
+
+private fun testWhile() {
+    val arr = intArrayOf(1, 2, 3)
+    var i = 0
+    while ( i < arr.size()) {
+        println(arr[i++])
+    }
+}
 
 
-//fun main(args: Array<String>) {
-////    for (arg in args)
-////        print(arg)
-//
-//
-//}
-//or
-//for (i in args.indices)
-//print(args[i])
+private fun testRange() {
+    //  Check if a number is within a range
+    val x = 3
+    val y = 10
+    if (x in 1..y - 1)
+        println("OK")
+    else
+        println("OUT")
+
+    //  Check if a number is out of range
+    val arr = intArrayOf(1, 2, 3, 4, 5)
+    if ( x !in 0..arr.lastIndex)
+        println("OUT")
+
+    //  Iterating over a range
+    for (x in 1..5)
+        println(x)
+}
+
+

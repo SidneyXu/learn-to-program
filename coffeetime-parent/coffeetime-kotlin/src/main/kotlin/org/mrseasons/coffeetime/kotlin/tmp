@@ -5,13 +5,6 @@ import java.util.*
 
 
 
-string template
-fun main(args: Array<String>) {
-if (args.size() == 0) return
-print("First argument: ${args[0]}")
-}
-
-
 
 nullable
 Return null if str does not hold an integer:
@@ -78,22 +71,7 @@ return null
 }
 
 
-for
-fun main(args: Array<String>) {
-for (arg in args)
-print(arg)
-}
-or
-for (i in args.indices)
-print(args[i])
 
-
-while
-fun main(args: Array<String>) {
-var i = 0
-while (i < args.size())
-print(args[i++])
-}
 
 
 when
@@ -108,36 +86,17 @@ else -> print("Unknown")
 }
 
 
-range
-Check if a number is within a range using in operator:
-if (x in 1..y-1)
-print("OK")
-Check if a number is out of range:
-if (x !in 0..array.lastIndex)
-print("Out")
-Iterating over a range:
-for (x in 1..5)
-print(x)
 
 
 collection
-Iterating over a collection:
-for (name in names)
-println(name)
-Checking if a collection contains an object using in operator:
-Using when expression
-Using ranges
-Using collections
-8
-if (text in names) // names.contains(text) is called
-print("Yes")
 Using function literals to filter and map collections:
 names filter { it.startsWith("A") } sortBy { it } map { it.toUpperCase() } forEach {
 print(it) }
 
 
 Idioms
-A collection of random and frequently used idioms in Kotlin. If you have a favorite idiom, contribute it. Do a pull request.
+A collection of random and frequently used idioms in Kotlin.
+If you have a favorite idiom, contribute it. Do a pull request.
 data class Customer(val name: String, val email: String)
 provides a Customer class with the following functionality:
 getters (and setters in case of var’s) for all properties
@@ -255,14 +214,33 @@ else -> throw IllegalArgumentException("Invalid color param value")
 }
 
 
+<<<<<<< HEAD
 default and named params
 fun bar(i: Int, s: String = "", b: Boolean = true) {}
 
 fun usage() {
     bar(1, b = false)
 }
+=======
+----------------------------------
 
-10
+
+Coding Conventions
+>>>>>>> 4d34b0efa935a6c10cfbbb315bd7e6f9767993e4
+
+backing field of a property, use the $ prefix
+avoid use _ or m_ or other notation
+if a function return unit, the return type should be ommitted
+
+
+--------------------------------------
+
+
+
+
+
+
+19
 
 
 
