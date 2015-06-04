@@ -255,8 +255,12 @@ else -> throw IllegalArgumentException("Invalid color param value")
 }
 
 
+default and named params
+fun bar(i: Int, s: String = "", b: Boolean = true) {}
 
-
+fun usage() {
+    bar(1, b = false)
+}
 
 10
 
