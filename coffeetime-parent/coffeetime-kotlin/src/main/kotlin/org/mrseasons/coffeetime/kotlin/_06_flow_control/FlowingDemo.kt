@@ -4,7 +4,11 @@ package org.mrseasons.coffeetime.kotlin._06_flow_control
  * Created by mrseasons on 2015/06/03.
  */
 fun main(args: Array<String>) {
+    //  support break and continue
+
     testIf()
+
+    testWhen()
 
     testFor()
 
@@ -15,10 +19,25 @@ fun main(args: Array<String>) {
 
 private fun testIf() {
     //  if
+    //  Traditional usage
+    var max = 1
+    if (1 < 2)
+        max = 2
+
+    //  last expression as value of a block
+    max = if (1 < 2) {
+        println("a")
+        2
+    } else {
+        println("b")
+        1
+    }
+
+    //  As expression
     val x = -1
     val s = if (x > 0) 1 else -1
     val s2 = if (x > 0) "a" else 65
-    val s3 = if (x > 0) 1 else Unit
+    val s3: Any = if (x > 0) 1 else Unit
 
     println(s)  //  -1
     println(s2) //  65
@@ -46,6 +65,10 @@ private fun testWhile() {
     while ( i < arr.size()) {
         println(arr[i++])
     }
+
+    do {
+        i++
+    } while (i < 5)
 }
 
 
@@ -68,4 +91,37 @@ private fun testRange() {
         println(x)
 }
 
+private fun testWhen() {
+    //  no need break
 
+    // like switch
+    val x = 10
+    when (x) {
+        1 -> println("x==1")
+        2 -> println("x==2")
+        3, 10 -> println("x==3 or x==10")
+        in 10..20 -> println("x is between 10 and 20")
+        !in 20..30 -> println("x is not between 20 and 30")
+        add(x) -> println("x=" + x)
+        else -> println("else")
+    }
+
+    val y = when (x) {
+        1 -> 2
+        3 -> 4
+        else -> 0
+    }
+    println(y)  //  0
+
+    //  like if else
+    when {
+        x == 5 -> println("x==5")
+        else -> println("x!=5")
+    }
+
+
+}
+
+private fun add(x: Int): Int {
+    return x + 1
+}

@@ -3,14 +3,14 @@ package org.mrseasons.coffeetime.scala._12_class
 /**
  * Created by mrseasons on 2015/2/12.
  */
-//main constructor
+//  main constructor
 class Man(val name: String, val age: Int, private var from: String = "USA", description: String = "none") {
 
   println("sentences in main constructor")
 
-  //slave constructor
+  //  slave constructor
   def this(name: String) {
-    //invoke main constructor
+    //  delegate to the main constructor
     this(name, 0)
   }
 
