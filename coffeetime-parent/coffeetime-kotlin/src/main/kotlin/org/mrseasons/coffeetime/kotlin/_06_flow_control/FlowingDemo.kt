@@ -102,6 +102,7 @@ private fun testWhen() {
         3, 10 -> println("x==3 or x==10")
         in 10..20 -> println("x is between 10 and 20")
         !in 20..30 -> println("x is not between 20 and 30")
+        is Int -> println("long")
         add(x) -> println("x=" + x)
         else -> println("else")
     }
