@@ -5,6 +5,7 @@ package org.mrseasons.coffeetime.kotlin._11_class
  */
 fun main(args: Array<String>) {
     testPerson()
+    testEnum()
 }
 
 fun testMan() {
@@ -29,4 +30,10 @@ fun testPerson() {
     p1.backAge = 30
     p1.backAge = 15
     println(p1.backAge) //  30
+}
+
+fun testEnum() {
+    println(TrafficColor.GREEN)     //  GREEN
+    println(TrafficColor.GREEN.name())  //  GREEN
+    println(TrafficColor.GREEN.ordinal())   //  2
 }

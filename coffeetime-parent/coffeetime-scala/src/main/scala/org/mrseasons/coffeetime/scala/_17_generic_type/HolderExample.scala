@@ -7,10 +7,10 @@ object HolderExample {
 
   def main(args: Array[String]) {
     //---default, without covariant---
-    var strHolder = new Holder[String]("a");
+    var strHolder = new Holder[String]("a")
     var intHolder = new Holder[Int](3)
-    strHolder.info //a
-    intHolder.info //3
+    strHolder.info // a
+    intHolder.info // 3
 
     var anyHolder = new Holder[AnyRef]("b")
     anyHolder.info //b
