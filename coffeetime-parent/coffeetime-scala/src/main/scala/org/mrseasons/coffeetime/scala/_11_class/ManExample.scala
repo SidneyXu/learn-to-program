@@ -10,6 +10,9 @@ object ManExample {
     val m2 = new Man("Fred") //slave
     val m3 = new Man(21) //slave
 
+    // Wrong
+//    println(m1.description)
+
     //    val w1=new Woman("Jane",21) main is private
     val w2 = new Woman("Jane")
   }

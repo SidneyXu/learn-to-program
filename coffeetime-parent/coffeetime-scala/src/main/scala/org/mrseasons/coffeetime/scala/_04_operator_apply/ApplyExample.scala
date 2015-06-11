@@ -10,19 +10,26 @@ object ApplyExample {
 
   def main(args: Array[String]) {
 
-    //apply and update
-    //use for making instance
+    //  apply
+    //  calling apply() on object
+    //  use for making instance
     val obj = ApplyExample(1, 2)
-    println(obj) //1+2
-    ApplyExample(2, 3) = 4 //(2,3,4)
+    println(obj) // 1+2
 
-    //use for container
+    //  calling apply() on class
+    obj() //  apply for class
+
+    //  update
+    ApplyExample(2, 3) = 4 // (2,3,4)
+
+
+    //  use for container
     val scores = new mutable.HashMap[String, Int]()
-    scores("Bob") = 100 //actually invoke scores.update("Bob,100)
-    val bob = scores("Bob") //actually invoke scores.apply("Bob")
+    scores("Bob") = 100 //  actually invoke scores.update("Bob,100)
+    val bob = scores("Bob") //  actually invoke scores.apply("Bob")
 
 
-    //unapply
+    //  unapply
     val ApplyExample(a, b) = ApplyExample(1, 2)
     println()
 
@@ -31,9 +38,9 @@ object ApplyExample {
       case ApplyExample(a, b) => a + "," + b
       case _ => "other"
     }
-    println(result) //10,20
+    println(result) //  10,20
 
-    //unapply in regex
+    //  unapply in regex
     "user@domain.com" match {
       case Email(user, domain) => println(user + "@" + domain)
     }
@@ -43,7 +50,7 @@ object ApplyExample {
 
   def update(x: Int, y: Int, z: Int) = println(x, y, z)
 
-  //use to extract value or return boolean
+  //  use to extract value or return boolean
   def unapply(input: ApplyExample) = {
     if (input.x < 0)
       None
@@ -55,6 +62,8 @@ object ApplyExample {
 
 class ApplyExample(var x: Int, var y: Int) {
   override def toString: String = x + "+" + y
+
+  def apply() = println("apply for class")
 }
 
 object Email {

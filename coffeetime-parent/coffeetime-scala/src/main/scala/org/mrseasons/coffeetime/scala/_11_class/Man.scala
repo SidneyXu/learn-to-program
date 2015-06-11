@@ -4,6 +4,7 @@ package org.mrseasons.coffeetime.scala._12_class
  * Created by mrseasons on 2015/2/12.
  */
 //  main constructor
+//  parameters without var or val in main constructor are same as private[this]
 class Man(val name: String, val age: Int, private var from: String = "USA", description: String = "none") {
 
   println("sentences in main constructor")

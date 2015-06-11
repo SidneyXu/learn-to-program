@@ -3,6 +3,7 @@ package org.mrseasons.coffeetime.scala._13_package
 //import
 import org.mrseasons.coffeetime.scala._13_package.A.B.C.{D2, D}
 import java.awt.{Color,Font}
+//  rename
 import java.util.{HashMap=>JavaHashMap}
 
 // create a package

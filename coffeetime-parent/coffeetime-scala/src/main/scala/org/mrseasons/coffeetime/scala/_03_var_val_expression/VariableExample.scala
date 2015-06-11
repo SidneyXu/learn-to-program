@@ -16,7 +16,6 @@ object VariableExample extends App {
   var lastName = "Peter"
   val three = 3
 
-
   //face expression
   val brand = "HP"
   val color: String = if (brand == "TI") {

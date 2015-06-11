@@ -23,7 +23,8 @@ object OptionExample {
   //return an option
   def getProperty(name: String): Option[String] = {
     val value = System.getProperty(name)
-    if (value != null) Some(value) else None
+    Option(value)
+    //  if (value != null) Some(value) else None
   }
 
 }
