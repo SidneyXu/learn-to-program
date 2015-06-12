@@ -59,6 +59,14 @@ def box(s: String) {
 }
 box("abc")
 
+//  value function
+def abc(s: String) = {
+  println(s)
+}
+val xyz = abc _ //  xyz is a value function
+abc("abc")  //  abc
+xyz("xyz")  //  xyz
+
 
 //anonymous function
 val add = (x: Int) => x + 1

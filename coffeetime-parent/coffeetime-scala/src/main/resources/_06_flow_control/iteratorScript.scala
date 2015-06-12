@@ -46,3 +46,68 @@ while (it6.hasNext) {
   val v = it6.next()
   println("it6", v) //(1,10),(2,11)
 }
+
+
+//  reduce
+val src = 1.to(5)
+def reducer(res: Int, key: Int) = {
+  println(s"op: $res + $key = ${res + key}")
+  res + key
+}
+
+val r = src.reduce(reducer)
+println("reducer", r)
+//op: 1 + 2 = 3
+//op: 3 + 3 = 6
+//op: 6 + 4 = 10
+//op: 10 + 5 = 15
+//(reducer,15)
+
+
+val rf = src.reduceLeft(reducer)
+println("reduceLeft", rf)
+//op: 1 + 2 = 3
+//op: 3 + 3 = 6
+//op: 6 + 4 = 10
+//op: 10 + 5 = 15
+//(reduceLeft,15)
+
+
+val f = src.fold(3)(reducer)
+println("fold", f)
+//op: 3 + 1 = 4
+//op: 4 + 2 = 6
+//op: 6 + 3 = 9
+//op: 9 + 4 = 13
+//op: 13 + 5 = 18
+//(fold,18)
+
+
+val fl = src.foldLeft(3)(reducer)
+println("foldLeft", fl)
+//op: 3 + 1 = 4
+//op: 4 + 2 = 6
+//op: 6 + 3 = 9
+//op: 9 + 4 = 13
+//op: 13 + 5 = 18
+//(foldLeft,18)
+
+
+val s = src.scan(3)(reducer)
+println("scan", s)
+//op: 3 + 1 = 4
+//op: 4 + 2 = 6
+//op: 6 + 3 = 9
+//op: 9 + 4 = 13
+//op: 13 + 5 = 18
+//(scan,Vector(3, 4, 6, 9, 13, 18))
+
+
+val sl = src.scanLeft(3)(reducer)
+println("scanLeft", sl)
+//op: 3 + 1 = 4
+//op: 4 + 2 = 6
+//op: 6 + 3 = 9
+//op: 9 + 4 = 13
+//op: 13 + 5 = 18
+//(scanLeft,Vector(3, 4, 6, 9, 13, 18))
