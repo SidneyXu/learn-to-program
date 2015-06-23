@@ -5,12 +5,24 @@ package org.mrseasons.coffeetime.kotlin._05_function
  */
 fun main(args: Array<String>) {
 
-    //call functions
+    //  call functions
     println(five())
 
+    //  Default Arguments
+    println(decorate("abc"))    //  [abc]
+
+    //  Named Arguments
+    println(decorate("abc", right = ">"))   //  [abc>
+
+    //  Variable Arguments
+    println(capitalizeAll("a", "b", "c"))  //  [A, B, C]
+
+    // use * to pass contents of an array to the function
+    val array = arrayOf("d", "e", "f")
+    println(capitalizeAll("a", "b", "c", *array))   //  [A, B, C, D, E, F]
 }
 
-//define functions
+//  define functions
 fun addOne(m: Int): Int = m + 1
 
 fun addTwo(m: Int): Int {
@@ -23,6 +35,17 @@ fun five(): Int {
     return x + y
 }
 
+//  Named Arguments
+fun decorate(str: String, left: String = "[", right: String = "]") = left + str + right
+
+//  Variable Arguments
+fun capitalizeAll(vararg args: String): List<String> {
+    return args.map { arg ->
+        arg.capitalize()
+    }
+}
+
+//  Sub
 fun echo(s: String): Unit {
     println(s)
 }
