@@ -7,29 +7,29 @@ object TypeConstraint extends App {
 
   //  A <:< Z
   //  check type of A is a sub type of Z
-  def f1[A](a: A)(implicit ev: A <:< Z): Unit = {
-    println("f1")
+  def f1[A](a: A)(implicit ev: A <:< T): Unit = {
+    println("f1", a.getClass)
   }
 
   //  A =:= Z
   // check type of A equals to type of Z
-  def f2[A](a: A)(implicit ev: A =:= Z): Unit = {
+  def f2[A](a: A)(implicit ev: A =:= T): Unit = {
     println("f2", a.getClass)
   }
 
-  implicit def t1ToZ(t: T1): Z = new Z
 
-  implicit val a: T1 = new T1
+  val t = new T
+  val t2 = new T2
 
-  val t1 = new T1
+  f1(t)
+  f1(t2)
+  f2(t)
 
-  //  f1(t1)
-  //  f1("x")
+  //  f2(t2)  wrong
 
-  f2(t1)
+  class T {}
+
+  class T2 extends T {}
 
 }
 
-class Z {}
-
-class T1 {}
