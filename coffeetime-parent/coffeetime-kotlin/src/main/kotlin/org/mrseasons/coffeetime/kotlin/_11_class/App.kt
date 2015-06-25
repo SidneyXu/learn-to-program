@@ -1,11 +1,21 @@
 package org.mrseasons.coffeetime.kotlin._11_class
-
 /**
  * Created by mrseasons on 2015/06/05.
  */
 fun main(args: Array<String>) {
+
+    testCounter()
     testPerson()
-    testEnum()
+    testMan()
+}
+
+fun testCounter() {
+    val counter = Counter()
+    counter.increment()
+    println(counter.current())
+    //    println(counter.value)    can not access
+    println(counter.publicValue)
+    println(counter.defaultValue)
 }
 
 fun testMan() {
@@ -18,10 +28,14 @@ fun testMan() {
     val w2 = Woman("Jane")
 }
 
+
 fun testPerson() {
+
     val p1 = Person()
     p1.age = 10
     println(p1.age) //  10
+    p1.address = "abc"
+    println(p1.address)
 
     p1.trueAge = 20
     p1.trueAge = 14
@@ -32,8 +46,3 @@ fun testPerson() {
     println(p1.backAge) //  30
 }
 
-fun testEnum() {
-    println(TrafficColor.GREEN)     //  GREEN
-    println(TrafficColor.GREEN.name())  //  GREEN
-    println(TrafficColor.GREEN.ordinal())   //  2
-}

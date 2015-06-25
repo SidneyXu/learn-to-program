@@ -23,6 +23,7 @@ fun main(args: Array<String>) {
     val sum4 = fun Int.(other: Int): Int = this + other
     1.sum4(2)
     1 sum4 2
+
 }
 
 //  functions as parameters
@@ -44,3 +45,15 @@ fun max<T>(collection: Collection<out T>, less: (T, T) -> Boolean): T? {
     return max
 }
 
+//  Inline Function
+//  each function is an object and captures a closure
+//  inline is used to improve performance
+//  keyword inline makes every lambda to be inlined, @noinline annotation can escape this
+inline fun inlineLock<T>(lock: Lock, body: () -> T, @noinline notInlined: () -> T): T {
+    lock.lock()
+    try {
+        return body()
+    } finally {
+        lock.unlock()
+    }
+}

@@ -5,7 +5,7 @@ import java.util.Date
 /**
  * Created by mrseasons on 2015/06/05.
  */
-class Person {
+public class Person {
     //  default getter and setter
     var address = ""
     public var age: Int = 0
