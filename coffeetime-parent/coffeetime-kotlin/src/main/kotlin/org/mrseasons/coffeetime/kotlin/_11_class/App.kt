@@ -1,8 +1,14 @@
 package org.mrseasons.coffeetime.kotlin._11_class
+
 /**
  * Created by mrseasons on 2015/06/05.
  */
 fun main(args: Array<String>) {
+    //  Visiblity
+    //    private — visible only in the declaring scope and its subscopes (inside the same module);
+    //    protected — (applicable only to class/interface members) like private , but also visible in subclasses;
+    //    internal — (used by default) visible everywhere within the same module (if the owner of declaring scope is visible);
+    //    public — visible everywhere (if the owner of declaring scope is visible).
 
     testCounter()
     testPerson()

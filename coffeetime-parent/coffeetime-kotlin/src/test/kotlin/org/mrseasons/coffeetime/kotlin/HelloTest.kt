@@ -1,7 +1,7 @@
 package hello.tests
 
-import hello.getHelloString
 import junit.framework.TestCase
+import org.mrseasons.coffeetime.kotlin._01_hello.getHelloString
 import kotlin.test.assertEquals
 
 class HelloTest : TestCase() {
