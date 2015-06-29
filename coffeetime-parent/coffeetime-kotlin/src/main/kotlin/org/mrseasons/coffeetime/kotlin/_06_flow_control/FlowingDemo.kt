@@ -79,7 +79,7 @@ private fun testRange() {
     val x = 3
     val y = 10
     if (x in 1..y - 1)
-        println("OK")
+        println("OK")   //  OK
     else
         println("OUT")
 
@@ -88,8 +88,31 @@ private fun testRange() {
     if ( x !in 0..arr.lastIndex)
         println("OUT")
 
+    //  String
+    val str = "abcdef"
+    if (str in "abc".."abe") {
+        println(str)    //  abcdef
+    }
+
     //  Iterating over a range
-    for (x in 1..5)
-        println(x)
+    for (z in 1..5)
+        print(z)    //  12345
+    println()
+
+    for (z in 4 downTo 1)
+        print(z)    //  4321
+    println()
+
+    for (z in 1..4 step 2)
+        print(z)    //  13
+    println()
+
+    for (z in 4 downTo 1 step 2)
+        print(z)    //  42
+    println()
+
+    for (z in (1..4).reversed())
+        print(z)    //  4321
+    println()
 }
 

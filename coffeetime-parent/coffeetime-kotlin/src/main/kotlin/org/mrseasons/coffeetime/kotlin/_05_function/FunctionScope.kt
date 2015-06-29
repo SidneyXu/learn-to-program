@@ -3,7 +3,6 @@ package org.mrseasons.coffeetime.kotlin._05_function
 /**
  * Created by mrseasons on 2015/06/24.
  */
-//  functions can be declared at top level in a file, meaning you do not need to create a class to hold a function
 //  Local Functions
 //  a function inside another function
 fun factorialTail(n: Int): Int {
@@ -23,17 +22,3 @@ class Sample {
         println("bar")
     }
 }
-
-//  Infix notation
-//Functions can also be called using infix notations when
-//They are member functions or extension functions
-//They have a single parameter
-// Define extension to Int
-fun Int.shl(x: Int): Int {
-    return x * 10
-}
-//// call extension function using infix notation
-//1 shl 2
-//// is the same as
-//1.shl(2)
-

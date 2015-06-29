@@ -180,13 +180,6 @@ for ((a, b) in collection) { ... }
 for ((key, value) in map)
 
 
-Ranges
-if (str in "island".."isle") println(str)
-for (i in 4 downTo 1) print(i)
-for (i in 1..4 step 2) print(i) /
-for (i in 4 downTo 1 step 2) print(i)
-for (i in (1..4).reversed()) print(i) /
-
 
 Type Checks and Casts
 is and !is Operators
@@ -382,9 +375,23 @@ Annotation Declaration
 
 Reflection
 
+Builder
 
 
-94
+Function
+//  Infix notation
+//Functions can also be called using infix notations when
+//They are member functions or extension functions
+//They have a single parameter
+// Define extension to Int
+fun Int.shl(x: Int): Int {
+    return x * 10
+}
+//// call extension function using infix notation
+//1 shl 2
+//// is the same as
+//1.shl(2)
+
 
 
 
