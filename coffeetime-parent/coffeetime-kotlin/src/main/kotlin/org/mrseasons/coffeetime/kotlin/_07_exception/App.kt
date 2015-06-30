@@ -6,10 +6,14 @@ import java.io.IOException
  * Created by mrseasons on 2015/06/26.
  */
 fun main(args: Array<String>) {
+    //  Kotlin does not have checked exceptions.
+
     try {
         throw IOException()
+    } catch(e: IOException) {
+        println("io exception")
     } catch(e: Exception) {
-
+        e.printStackTrace()
     } finally {
 
     }
@@ -22,5 +26,5 @@ fun main(args: Array<String>) {
         -1
     }
 
-    //  Kotlin does not have checked exceptions.
+
 }
