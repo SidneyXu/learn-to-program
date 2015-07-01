@@ -8,21 +8,21 @@ import kotlin.test.assertEquals
  */
 class GreetingTest {
 
-    /**
-     * Given the user name is "Kotlin"
-     * When we call "sayHai" with user name.
-     * Then it should return "Hello Kotlin!"
-     */
-    test fun sayHiWithParameter() {
-        assertEquals("Hello Kotlin!", sayHi("Kotlin"))
-    }
-
-    /**
-     * Given the user name is not specified
-     * When we call "sayHai" without any parameter.
-     * Then it should return "Hello World!"
-     */
-    test fun sayHiWithoutParameter() {
-        assertEquals("Hello World!", sayHi())
-    }
+//    /**
+//     * Given the user name is "Kotlin"
+//     * When we call "sayHai" with user name.
+//     * Then it should return "Hello Kotlin!"
+//     */
+//    test fun sayHiWithParameter() {
+//        assertEquals("Hello Kotlin!", sayHi("Kotlin"))
+//    }
+//
+//    /**
+//     * Given the user name is not specified
+//     * When we call "sayHai" without any parameter.
+//     * Then it should return "Hello World!"
+//     */
+//    test fun sayHiWithoutParameter() {
+//        assertEquals("Hello World!", sayHi())
+//    }
 }

@@ -3,7 +3,7 @@ package org.mrseasons.coffeetime.kotlin._13_package
 
 //  import
 import hello
-import hello.*
+//import hello.*
 import foo.info
 
 //  alias

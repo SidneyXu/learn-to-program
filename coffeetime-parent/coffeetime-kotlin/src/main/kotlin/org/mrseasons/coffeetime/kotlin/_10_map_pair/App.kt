@@ -20,14 +20,19 @@ fun main(args: Array<String>) {
     }
 
     //  Multi-Declarations
-//    val person=Person("Jane",20)
-//    val (name,age)=person
+    val person = Person("Jane", 20)
+    val  (name, age) = person
+    val pname = person.component1()
+    println(name.toString() + ", " + age + ", " + pname)    //  Jane, 20, Jane
 
 }
 
-//fun Person.component2(): Any {
-//}
-//
-//class Person(val name:String, val age:Int){
-//
-//}
+class Person(val name: String, val age: Int) {
+    fun component1(): String {
+        return name
+    }
+
+    fun component2(): Int {
+        return age
+    }
+}

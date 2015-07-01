@@ -5,6 +5,9 @@ package org.mrseasons.coffeetime.kotlin._09_collection
  */
 fun main(args: Array<String>) {
 
+    //  empty list
+    val empty = emptyList<Int>()
+
     //  immutable list
     val list = listOf("a", "b", "c")
     println(list)   //  [a, b, c]

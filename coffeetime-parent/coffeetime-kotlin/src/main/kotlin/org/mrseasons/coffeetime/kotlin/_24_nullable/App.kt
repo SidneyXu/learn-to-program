@@ -1,4 +1,4 @@
-package org.mrseasons.coffeetime.kotlin.nullable
+package org.mrseasons.coffeetime.kotlin._24_nullable
 
 /**
  * Created by mrseasons on 2015/06/26.
