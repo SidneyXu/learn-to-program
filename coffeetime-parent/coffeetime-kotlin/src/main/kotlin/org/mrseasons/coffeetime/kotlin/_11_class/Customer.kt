@@ -4,11 +4,11 @@ package org.mrseasons.coffeetime.kotlin._11_class
  * Created by mrseasons on 2015/06/26.
  */
 //  Data Class
+//  do nothing but hold data
 //  provides the following functionality
-//getters (and setters in case of var’s) for all properties
-//equals()
-//hashCode()
-//toString()
-//copy()
-//component1() , component2() , …, for all properties (see Data classes)
+// getters (and setters in case of var’s) for all properties
+// equals()/hashCode()
+// toString()
+// copy()
+// componentN()
 data class Customer(var name: String, var email: String)

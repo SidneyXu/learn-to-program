@@ -1,4 +1,4 @@
-package org.mrseasons.coffeetime.kotlin.object_expression_3
+package org.mrseasons.coffeetime.kotlin._11_class
 
 /**
  * Created by mrseasons on 2015/06/10.

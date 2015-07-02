@@ -54,4 +54,8 @@ fun echo2(s: String) {
     println(s)
 }
 
+//  For public functions the return type can't be omitted
 public fun sum(a: Int, b: Int): Int = a + b
+
+//  The default visibility is 'internal' meaning "visible inside a module"
+internal fun ibar() = 57

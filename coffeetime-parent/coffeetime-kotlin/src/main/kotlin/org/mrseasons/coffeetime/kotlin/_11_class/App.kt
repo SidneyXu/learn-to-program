@@ -1,5 +1,9 @@
 package org.mrseasons.coffeetime.kotlin._11_class
 
+import java.awt.event.MouseAdapter
+import java.awt.event.MouseEvent
+import javax.swing.JComponent
+
 /**
  * Created by mrseasons on 2015/06/05.
  */
@@ -13,6 +17,8 @@ fun main(args: Array<String>) {
     testCounter()
     testPerson()
     testMan()
+    testCustomer()
+    testObjects()
 }
 
 fun testCounter() {
@@ -52,3 +58,49 @@ fun testPerson() {
     println(p1.backAge) //  30
 }
 
+fun testCustomer() {
+    //  Data classes
+    val peter = Customer("Peter", "peter@example.com")
+
+    //  Copying
+    val peter2 = peter.copy()
+    val peter3 = peter.copy(name = "")
+
+    println(peter2)
+    println(peter3)
+
+    //  Component Function
+    val (name, email) = peter
+    println("name=$name,email=$email")
+}
+
+fun testObjects() {
+    //   like Java’s anonymous inner classes,
+    val ab = object : A(1), B {
+        override val y: Int
+            get() = 15
+    }
+
+    //   “just an object”, with no nontrivial supertypes
+    val adHoc = object {
+        var x: Int = 1
+        var y: Int = 2
+    }
+
+    println(ab.y)
+    println(adHoc.x)
+
+    //  Object
+    val my = MyClass.create()
+}
+
+fun countClicks(window: JComponent) {
+    var clickCount = 0
+    var enterCount = 0
+
+    window.addMouseListener(object : MouseAdapter() {
+        override fun mouseClicked(e: MouseEvent) {
+            super.mouseClicked(e)
+        }
+    })
+}
