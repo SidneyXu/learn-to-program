@@ -14,9 +14,28 @@ fun main(args: Array<String>) {
     mMap.put("d", 4)
     println(mMap)   //  {a=1, b=2, c=3, d=4}
 
+    //  access an element
+    println(mMap.get("d"))
+
+    //  access an not exist key would throw an exception
+    //    println(mMap.get("e"))
+    val x = if (mMap.containsKey("e")) mMap.get("e") else 0
+    println(mMap.getOrDefault("e", 10))
+
+    //  update elements
+    mMap.put("d", 20)
+    mMap.remove("c")
+    println(mMap)
+
     //  traversing a map
     for ((k, v)in map) {
         println("$k -> $v")
+    }
+
+    val keys = map.keySet()
+    val values = map.values()
+    for (k in keys){
+
     }
 
     //  Multi-Declarations

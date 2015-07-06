@@ -14,6 +14,7 @@
         <module>coffeetime-groovy</module>
         <module>coffeetime-kotlin</module>
         <module>coffeetime-java</module>
+        <module>coffeetime-clojure</module>
     </modules>
 
     <!--properties-->

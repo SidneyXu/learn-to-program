@@ -1,4 +1,4 @@
-package org.mrseasons.coffeetime.kotlin.annotation_6
+package org.mrseasons.coffeetime.kotlin._15_annotation
 
 /**
  * Created by mrseasons on 2015/06/26.

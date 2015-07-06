@@ -23,7 +23,14 @@ fun main(args: Array<String>) {
 
     //  The ways to call method on nullable variable
     //    Checking for null in conditions
-    var l = if (b != null) b.length() else -1
+    val arr = arrayOf("1", "2")
+    val x = parseInt(arr[0])
+    val y = parseInt(arr[1])
+    // Using `x * y` yields error because they may hold nulls.
+    if (x != null && y != null) {
+        // x and y are automatically cast to non-nullable after null check
+        print(x * y)
+    }
 
     // Safe Calls
     //  ?.  is used to call method is variable is not null, otherwise return null.
@@ -31,30 +38,29 @@ fun main(args: Array<String>) {
 
     //  Elvis Operator
     //  if is not null, use it, otherwise use another non-null value
-    l = b?.length() ?: -1
+    var l = b?.length() ?: -1
     val foo = a.length() > 3 ?: throw IllegalArgumentException("name expected")
 
     //  The !! Operator
     //  return a non-null value or throw NPE if is null
     l = b!!.length()
+
+    //Using type checks and automatic casts
+    println(getStringLength("abc"))
+    println(getStringLength(123))
 }
 
+// ? allow function return null
+fun parseInt(str: String): Int? {
+    return str.toInt()
+}
 
+fun getStringLength(obj: Any): Int? {
+    if (obj is String) {
+        // `obj` is automatically cast to `String` in this branch
+        return obj.length()
+    }
+    // `obj` is still of type `Any` outside of the type-checked branch
+    return null
+}
 
-
-
-//The third option is for NPE-lovers.
-// We can write b!! , and this will return a non-null value of b
-// (e.g., a String in our
-//        example) or throw an NPE if b is null:
-//val l = b!!.length()
-//Thus, if you want an NPE, you can have it, but you have to ask for it explicitly,
-// and it does not appear out of the blue.
-//By the way, !! is added for conciseness,
-// and formerly was emulated by an extension function from the standard library,
-//defined as follows:
-//inline fun <T : Any> T?.sure(): T =
-//        if (this == null)
-//         throw NullPointerException()
-//        else
-//         this
