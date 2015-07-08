@@ -1,4 +1,4 @@
-package org.mrseasons.coffeetime.kotlin.delegation_4
+package org.mrseasons.coffeetime.kotlin._24_delegation
 
 /**
  * Created by mrseasons on 2015/06/10.

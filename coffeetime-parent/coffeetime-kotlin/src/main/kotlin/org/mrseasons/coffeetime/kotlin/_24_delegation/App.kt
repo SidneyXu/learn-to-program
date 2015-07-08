@@ -1,4 +1,4 @@
-package org.mrseasons.coffeetime.kotlin.delegation_4
+package org.mrseasons.coffeetime.kotlin._24_delegation
 
 import kotlin.properties.Delegates
 

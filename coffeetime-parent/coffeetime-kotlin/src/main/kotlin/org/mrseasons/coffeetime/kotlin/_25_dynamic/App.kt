@@ -1,4 +1,4 @@
-package org.mrseasons.coffeetime.kotlin.dynamic_08
+package org.mrseasons.coffeetime.kotlin._25_dynamic
 
 import javax.swing.text.html.HTML
 
