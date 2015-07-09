@@ -70,17 +70,17 @@
 
     <!--repositories-->
     <repositories>
-        <repository>
-            <id>os-china</id>
-            <name>OS China</name>
-            <url>http://maven.oschina.net/content/groups/public</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
+        <!--<repository>-->
+            <!--<id>os-china</id>-->
+            <!--<name>OS China</name>-->
+            <!--<url>http://maven.oschina.net/content/groups/public</url>-->
+            <!--<releases>-->
+                <!--<enabled>true</enabled>-->
+            <!--</releases>-->
+            <!--<snapshots>-->
+                <!--<enabled>false</enabled>-->
+            <!--</snapshots>-->
+        <!--</repository>-->
         <repository>
             <id>sonatype.oss.snapshots</id>
             <name>Sonatype OSS Snapshot Repository</name>

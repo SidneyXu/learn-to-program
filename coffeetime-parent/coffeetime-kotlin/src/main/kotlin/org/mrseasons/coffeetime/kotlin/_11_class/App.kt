@@ -1,5 +1,6 @@
 package org.mrseasons.coffeetime.kotlin._11_class
 
+import org.mrseasons.coffeetime.kotlin._12_object_enum.MyClass
 import java.awt.event.MouseAdapter
 import java.awt.event.MouseEvent
 import javax.swing.JComponent
@@ -18,7 +19,6 @@ fun main(args: Array<String>) {
     testPerson()
     testMan()
     testCustomer()
-    testObjects()
 }
 
 fun testCounter() {
@@ -72,26 +72,6 @@ fun testCustomer() {
     //  Component Function
     val (name, email) = peter
     println("name=$name,email=$email")
-}
-
-fun testObjects() {
-    //   like Java’s anonymous inner classes,
-    val ab = object : A(1), B {
-        override val y: Int
-            get() = 15
-    }
-
-    //   “just an object”, with no nontrivial supertypes
-    val adHoc = object {
-        var x: Int = 1
-        var y: Int = 2
-    }
-
-    println(ab.y)
-    println(adHoc.x)
-
-    //  Object
-    val my = MyClass.create()
 }
 
 fun countClicks(window: JComponent) {

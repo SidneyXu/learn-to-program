@@ -1,4 +1,4 @@
-package org.mrseasons.coffeetime.kotlin._12_enum
+package org.mrseasons.coffeetime.kotlin._12_object_enum
 
 /**
  * Created by mrseasons on 2015/06/09.
