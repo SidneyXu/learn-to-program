@@ -3,9 +3,9 @@ package org.mrseasons.coffeetime.kotlin._13_package
 
 //  import
 import hello
+import goodbye
 //import hello.*
 import foo.info
-
 //  alias
 import foo.bar as b
 
@@ -25,6 +25,7 @@ fun main(args: Array<String>) {
 
     //  default package
     hello()
+    goodbye()
 
     b.bar()
 }

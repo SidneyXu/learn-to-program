@@ -1,4 +1,7 @@
-package org.mrseasons.coffeetime.kotlin.extension_1
+package org.mrseasons.coffeetime.kotlin._18_extension_this
+
+import org.mrseasons.coffeetime.kotlin._18_extension_this.A
+import org.mrseasons.coffeetime.kotlin.extension_1.*
 
 /**
  * Created by mrseasons on 2015/06/08.
@@ -17,12 +20,12 @@ fun main(args: Array<String>) {
     println(n2.toString())  //  a null num
 
     //  Extension Properties
-    val l:List<Int> = listOf(1,2,3)
+    val l: List<Int> = listOf(1, 2, 3)
     println(l.abc)  //  abc
 
     //  Companion Object Extensions
     MyClass.foo()   //  foo in companion object
 
-
-
+    //  This Expression
+    A.B().info()
 }

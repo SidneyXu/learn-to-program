@@ -69,7 +69,7 @@ fun main(args: Array<String>) {
     //For var’s we can use mapVar() (note that it takes a MutableMap instead of read-only Map ).
 }
 
-val lazy: String by Delegates.lazy {
+val lazy: String by lazy {
     println("computed!")
     "Hello"
 }

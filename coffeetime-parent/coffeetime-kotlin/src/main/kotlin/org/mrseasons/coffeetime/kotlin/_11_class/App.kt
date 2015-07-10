@@ -1,6 +1,5 @@
 package org.mrseasons.coffeetime.kotlin._11_class
 
-import org.mrseasons.coffeetime.kotlin._12_object_enum.MyClass
 import java.awt.event.MouseAdapter
 import java.awt.event.MouseEvent
 import javax.swing.JComponent

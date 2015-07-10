@@ -1,4 +1,4 @@
-package org.mrseasons.coffeetime.kotlin.extension_1
+package org.mrseasons.coffeetime.kotlin._18_extension_this
 
 /**
  * Created by mrseasons on 2015/06/08.

@@ -5,3 +5,7 @@
 fun hello() {
     println("hello, Default Package")
 }
+
+fun goodbye() {
+
+}
