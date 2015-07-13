@@ -1,7 +1,7 @@
 package org.mrseasons.coffeetime.kotlin._18_extension_this
 
 import org.mrseasons.coffeetime.kotlin._18_extension_this.A
-import org.mrseasons.coffeetime.kotlin.extension_1.*
+import org.mrseasons.coffeetime.kotlin._18_extension_this.A.B
 
 /**
  * Created by mrseasons on 2015/06/08.
@@ -27,5 +27,5 @@ fun main(args: Array<String>) {
     MyClass.foo()   //  foo in companion object
 
     //  This Expression
-    A.B().info()
+//    A.B().info()
 }

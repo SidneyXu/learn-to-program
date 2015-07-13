@@ -27,6 +27,9 @@ class Employee(name: String) : Person(name) {
         super.idf2()
     }
 
+    override fun toString(): String {
+        return super.toString() + javaClass.getName()
+    }
 }
 
 //  parent has no primary constructor
@@ -40,13 +43,16 @@ open class View {
 
 //  interface is similar to java 8
 //  contains methods and abstract properties
-interface A{
-    val prop:Int
+interface A {
+    val prop: Int
 
-    fun foo(){}
+    fun foo() {
+    }
+
     fun bar()
 }
-class B:A{
+
+class B : A {
     override fun bar() {
         throw UnsupportedOperationException()
     }
@@ -86,4 +92,9 @@ class Rectangle : Shape(), OnClickListener {
 //  override a non-abstract member with abstract one
 abstract class SuperTextView(size: Int) : TextView(size) {
     abstract override fun onClick()
+}
+
+fun main(args: Array<String>) {
+    val rect = Rectangle()
+    rect.onClick()
 }
