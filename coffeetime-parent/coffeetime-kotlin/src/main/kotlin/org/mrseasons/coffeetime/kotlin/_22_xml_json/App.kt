@@ -1,6 +1,7 @@
 package org.mrseasons.coffeetime.kotlin._22_xml_json
 
 import java.io.File
+import javax.xml.parsers.DocumentBuilderFactory
 import kotlin.dom.parseXml
 
 /**
@@ -12,6 +13,8 @@ fun main(args: Array<String>) {
     println(f.exists())
     println(f.getAbsolutePath())
 
-    val weather = parseXml(f)
-    println(weather)
+    val builder=DocumentBuilderFactory.newInstance().newDocumentBuilder()
+    println(builder.parse(f))
+//    val weather = parseXml(f, )
+//    println(weather)
 }

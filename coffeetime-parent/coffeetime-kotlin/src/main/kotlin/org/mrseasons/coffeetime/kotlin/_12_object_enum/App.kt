@@ -9,6 +9,15 @@ fun main(args: Array<String>) {
 }
 
 fun testObjects() {
+    //  Object Declaration
+    //  Singleton
+    Singleton.sequence()
+    Singleton.sequence()
+    println(Singleton.sequence())
+
+    //  Companion Object
+    val c = Companion.create()
+
     //   like Java’s anonymous inner classes,
     val ab = object : A(1), B {
         override fun info() {
@@ -22,6 +31,7 @@ fun testObjects() {
     println(ab.y)
     println(ab.javaClass)
 
+    //  Object Expression
     //   “just an object”, with no nontrivial supertypes
     val adHoc = object {
         var x: Int = 1
@@ -29,15 +39,6 @@ fun testObjects() {
     }
 
     println(adHoc.x)
-
-    //  Object
-    //  Singleton
-    Singleton.sequence()
-    Singleton.sequence()
-    println(Singleton.sequence())
-
-    //  Companion Object
-    val c = Companion.create()
 }
 
 fun testEnum() {

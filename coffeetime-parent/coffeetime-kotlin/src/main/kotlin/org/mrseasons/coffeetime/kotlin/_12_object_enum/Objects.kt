@@ -3,17 +3,8 @@ package org.mrseasons.coffeetime.kotlin._12_object_enum
 /**
  * Created by mrseasons on 2015/06/10.
  */
-////  Object expression is used to make a slight modification of some class.
-open class A(x: Int) {
-    public open val y: Int = x
-}
-
-interface B {
-    fun info()
-}
-
 //  Object declaration
-//  singleton
+//  Singleton
 object Singleton {
     private var num = 0
 
@@ -43,6 +34,15 @@ class Companion(private var balance: Int = 0) {
     }
 
     val id = Companion.sequence()
+}
+
+//  Object expression is used to make a slight modification of some class.
+open class A(x: Int) {
+    public open val y: Int = x
+}
+
+interface B {
+    fun info()
 }
 
 //  Differences between Object expression and Object declaration
