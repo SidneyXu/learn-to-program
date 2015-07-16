@@ -5,10 +5,9 @@ package org.mrseasons.coffeetime.kotlin._17_generic_type
  */
 fun main(args: Array<String>) {
 
-    var strHolder = Holder<String>("a")
-    var intHolder = Holder<Int>(3)
+    var strHolder = Holder("a")
+    var intHolder = Holder(3)
     strHolder.info()    //  a
     intHolder.info()    //  3
-
 
 }

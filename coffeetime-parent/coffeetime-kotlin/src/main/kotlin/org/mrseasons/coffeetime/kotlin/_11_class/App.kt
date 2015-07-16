@@ -8,7 +8,7 @@ import javax.swing.JComponent
  * Created by mrseasons on 2015/06/05.
  */
 fun main(args: Array<String>) {
-    //  Visiblity
+    //  Visibility
     //    private — visible only in the declaring scope and its subscopes (inside the same module);
     //    protected — (applicable only to class/interface members) like private , but also visible in subclasses;
     //    internal — (used by default) visible everywhere within the same module (if the owner of declaring scope is visible);
@@ -17,7 +17,6 @@ fun main(args: Array<String>) {
     testCounter()
     testPerson()
     testMan()
-    testCustomer()
 }
 
 fun testCounter() {
@@ -55,22 +54,6 @@ fun testPerson() {
     p1.backAge = 30
     p1.backAge = 15
     println(p1.backAge) //  30
-}
-
-fun testCustomer() {
-    //  Data classes
-    val peter = Customer("Peter", "peter@example.com")
-
-    //  Copying
-    val peter2 = peter.copy()
-    val peter3 = peter.copy(name = "")
-
-    println(peter2)
-    println(peter3)
-
-    //  Component Function
-    val (name, email) = peter
-    println("name=$name,email=$email")
 }
 
 fun countClicks(window: JComponent) {
