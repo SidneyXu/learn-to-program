@@ -41,6 +41,7 @@ class A { // implicit label @A
         }
 
         fun info() {
+            println("info= " + this)    //B.s this
             10.foo()
         }
     }

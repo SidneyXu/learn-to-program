@@ -10,4 +10,5 @@ fun main(args: Array<String>) {
     strHolder.info()    //  a
     intHolder.info()    //  3
 
+
 }

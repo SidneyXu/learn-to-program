@@ -6,6 +6,17 @@ package org.mrseasons.coffeetime.kotlin._18_extension_this
 //  Extension Function
 //  Extensions are resolved statically, do not actually modify class
 //  this corresponds to the receiver object
+class Num(var x: Int) {
+    fun add(y: Int) {
+        x += y
+    }
+
+    // a member always win an extension
+    fun foo() {
+        println("foo in Num")
+    }
+}
+
 fun Num.add(x: Int, y: Int) {
     this.x += x + y
 }
@@ -20,21 +31,10 @@ fun Num?.toString(): String {
     return toString()
 }
 
-class Num(var x: Int) {
-    fun add(y: Int) {
-        x += y
-    }
-
-    // a member always win an extension
-    fun foo() {
-        println("foo in Num")
-    }
-}
-
 //  Extension Properties
 //  Their behavior can only be defined by explicitly providing getters/setters
-val <T> List<T>.abc: String
-    get() = "abc"
+val <T> List<T>.second: T
+    get() = get(1)
 
 //  Companion Object Extensions
 class MyClass {
