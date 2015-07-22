@@ -12,21 +12,26 @@ fun main(args: Array<String>) {
 
     val sum2: (Int, Int) -> Int = { x, y -> x + y }
 
+    //Functions as Parameters
+    val x = add({ Int -> 2 })
+    println(x) //   2
+
     //  Closure
-    //    var sum3 = 0
-    //    ints filter {it > 0} forEach {
-    //        sum3 += it
-    //    }
-    //    print(sum3)
+    var sum3 = 0
+    val ints = intArrayOf(1, 2, 3)
+    ints filter { it > 0 } forEach {
+        sum3 += it
+    }
+    println(sum3) //  6
 
     //  Extension Function Expressions
     val sum4 = fun Int.(other: Int): Int = this + other
-    1.sum4(2)
+    println(1.sum4(2))  //  3
     1 sum4 2
 
 }
 
-//  functions as parameters
+//  Functions as Parameters
 fun lock<T>(lock: Lock, body: () -> T): T {
     lock.lock()
     try {
@@ -36,20 +41,20 @@ fun lock<T>(lock: Lock, body: () -> T): T {
     }
 }
 
+fun add(f: (Int) -> Int) = f(10)
+
 //  Function Types
-fun max<T>(collection: Collection<out T>, less: (T, T) -> Boolean): T? {
+fun max<T>(collection: Collection<T>, less: (T, T) -> Boolean): T? {
     var max: T? = null
     for (it in collection)
-        if (max == null || less(max!!, it))
+        if (max == null || less(max, it))
             max = it
     return max
 }
 
 //  Inline Function
-//  each function is an object and captures a closure
-//  inline is used to improve performance
-//  keyword inline makes every lambda to be inlined, @noinline annotation can escape this
-inline fun inlineLock<T>(lock: Lock, body: () -> T, @noinline notInlined: () -> T): T {
+inline fun inlineLock<T>(lock: Lock, body: () -> T,
+                         @noinline notInlined: () -> T): T {
     lock.lock()
     try {
         return body()
