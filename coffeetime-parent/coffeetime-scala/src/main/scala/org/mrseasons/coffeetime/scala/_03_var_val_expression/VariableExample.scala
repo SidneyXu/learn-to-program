@@ -1,5 +1,7 @@
 package org.mrseasons.coffeetime.scala._03_var_val_expression
 
+import _root_.kotlin.jvm.functions
+
 /**
  * Created by mrseasons on 2015/06/06.
  */
@@ -26,7 +28,7 @@ object VariableExample extends App {
     "white"
   }
   println(color)
-
+Function2
 
   //loading mechanism
   def newWords = ("a", "b", "c", Math.random())
