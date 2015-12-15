@@ -24,9 +24,9 @@ object HighOrderExample {
     println(arr(1)) //2
 
     //parameters type inference
-    triple = ((x) => 3 * x)
-    triple = (x => 3 * x)
-    triple = (3 * _)
+    triple = (x) => 3 * x
+    triple = x => 3 * x
+    triple = 3 * _
 
     //high-order function
     val x = add((x: Int) => 2)
