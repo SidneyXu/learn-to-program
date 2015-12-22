@@ -19,7 +19,6 @@ object FunctionExample {
     }
     println(plus3(7)) //10
 
-
   }
 
 }
