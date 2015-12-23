@@ -14,7 +14,7 @@ class EchoServer extends Actor {
 
   @throws[Exception](classOf[Exception])
   override def preStart(): Unit = {
-    super.preStart();
+    super.preStart()
     println("preStart")
   }
 }

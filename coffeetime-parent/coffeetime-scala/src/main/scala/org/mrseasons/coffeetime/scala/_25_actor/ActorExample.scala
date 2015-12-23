@@ -64,7 +64,7 @@ object ActorExample extends App {
     })
 
     val version = fromURL.ask(versionUrl)(akka.util.Timeout(5, TimeUnit.SECONDS))
-    version.foreach(println _)
+    version.foreach(println)
 
     system.shutdown
   }
