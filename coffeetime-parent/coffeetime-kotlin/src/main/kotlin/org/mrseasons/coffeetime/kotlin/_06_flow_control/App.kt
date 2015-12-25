@@ -65,7 +65,7 @@ private fun testFor() {
 private fun testWhile() {
     val arr = intArrayOf(1, 2, 3)
     var i = 0
-    while ( i < arr.size()) {
+    while ( i < arr.size) {
         println(arr[i++])
     }
 

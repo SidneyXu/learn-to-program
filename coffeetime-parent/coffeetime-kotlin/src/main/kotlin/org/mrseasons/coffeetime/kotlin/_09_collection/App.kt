@@ -19,13 +19,13 @@ fun main(args: Array<String>) {
 
     //  traversing a list
     val names = listOf("Mike", "Peter", "Jane", "Mary")
-    names filter {
+    names.filter {
         it.startsWith("M")
-    } sortBy {
+    }.sortedBy {
         it
-    }map {
+    }.map {
         it.toUpperCase()
-    }forEach { print("${it},") }
+    }.forEach { print("${it},") }
     println()   //  MARY,MIKE,
 
 }

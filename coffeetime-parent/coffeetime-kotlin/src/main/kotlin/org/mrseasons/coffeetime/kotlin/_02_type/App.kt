@@ -56,7 +56,7 @@ fun main(args: Array<String>) {
 
     //  templates
     val name = "Peter"
-    val str = "name=$name, $name.length, ${if (name.length() > 10) 10 else name.length()}"
+    val str = "name=$name, $name.length, ${if (name.length > 10) 10 else name.length}"
     println(str)    //  name=Peter, Peter.length, 5
 
 
@@ -65,7 +65,7 @@ fun main(args: Array<String>) {
     if (name is String) {
         //  Smart Casts
         //  compiler is smart enough to make name automatically cast to String
-        println(name.length())
+        println(name.length)
     }
     if (name !is String) {
         println("not a string")
@@ -81,12 +81,12 @@ fun main(args: Array<String>) {
     println(m)  //  any
 
     var n: String? = thing as String?
-    n :String = empty as String?
+    //     n :String = empty as String?
     println(n)  //  null
 
     //  as? return the result of the cast or null on failure
     var p: String? = thing as? String
-    p: String? = empty as? String
+    //    p: String? = empty as? String
     println(p)  //  null
 
 
@@ -103,7 +103,7 @@ fun main(args: Array<String>) {
     val refNow1 = now
     val refNow2 = now
     val newRef = Date()
-    println(refNow1 identityEquals refNow2) //  true
+    println(refNow1.identityEquals(refNow2)) //  true
     println(refNow1 === refNow2)    //  true
     println(refNow1 !== refNow2)    //  false
     println(refNow1 !== newRef) //  true

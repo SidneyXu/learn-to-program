@@ -18,7 +18,7 @@ fun main(args: Array<String>) {
     var b: String? = "abc"
     b = null
 
-    a.length()  //  ok, a is not null
+    a.length  //  ok, a is not null
     //    b.length()    error, that would not be safe
 
     //  The ways to call method on nullable variable
@@ -34,16 +34,16 @@ fun main(args: Array<String>) {
 
     // Safe Calls
     //  ?.  is used to call method is variable is not null, otherwise return null.
-    val len: Int? = b?.length()
+    val len: Int? = b?.length
 
     //  Elvis Operator
     //  if is not null, use it, otherwise use another non-null value
-    var l = b?.length() ?: -1
-    val foo = a.length() > 3 ?: throw IllegalArgumentException("name expected")
+    var l = b?.length ?: -1
+    val foo = a.length > 3 ?: throw IllegalArgumentException("name expected")
 
     //  The !! Operator
     //  return a non-null value or throw NPE if is null
-    l = b!!.length()
+    l = b!!.length
 
     //Using type checks and automatic casts
     println(getStringLength("abc"))
@@ -58,7 +58,7 @@ fun parseInt(str: String): Int? {
 fun getStringLength(obj: Any): Int? {
     if (obj is String) {
         // `obj` is automatically cast to `String` in this branch
-        return obj.length()
+        return obj.length
     }
     // `obj` is still of type `Any` outside of the type-checked branch
     return null
