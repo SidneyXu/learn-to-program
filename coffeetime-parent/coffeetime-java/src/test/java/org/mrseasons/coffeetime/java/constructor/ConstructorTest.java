@@ -1,6 +1,5 @@
 package org.mrseasons.coffeetime.java.constructor;
 
-import com.google.common.base.Converter;
 import junit.framework.TestCase;
 
 /**

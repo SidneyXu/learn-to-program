@@ -8,8 +8,7 @@ import javax.servlet.http.HttpServletResponse
 /**
  * Created by mrseasons on 2015/08/03.
  */
-WebServlet(name = "Hello", value = "/hello")
-
+@WebServlet(name = "Hello", value = "/hello")
 public class HomeController : HttpServlet() {
     override fun doGet(req: HttpServletRequest?, resp: HttpServletResponse?) {
         resp?.getWriter()?.write("Hello, World!")

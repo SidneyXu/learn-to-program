@@ -1,6 +1,9 @@
-package org.mrseasons.coffeetime.java._concurrent;
+package org.mrseasons.coffeetime.java.concurrent;
 
-import akka.actor.*;
+import akka.actor.ActorRef;
+import akka.actor.ActorSystem;
+import akka.actor.Props;
+import akka.actor.UntypedActor;
 
 import java.util.ArrayList;
 import java.util.List;

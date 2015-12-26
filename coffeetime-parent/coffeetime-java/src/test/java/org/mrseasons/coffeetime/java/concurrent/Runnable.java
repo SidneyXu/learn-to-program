@@ -1,14 +1,15 @@
-package org.mrseasons.coffeetime.java._concurrent;
+package org.mrseasons.coffeetime.java.concurrent;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.Random;
+import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * Created by mrseasons on 2015/2/28.
  */
-public class ForkJoin {
+public class Runnable {
+
     public static void main(String[] args) {
         String question = "question";
         List<String> baseUrls = new ArrayList<>();
@@ -17,17 +18,23 @@ public class ForkJoin {
         }
         String result = getFirstResult(question, baseUrls);
         System.out.println(result);
+
+//        125566608
+//        122153208
+//        base_31?q=question
     }
 
-    private static String getFirstResult(String question, List<String> engines) {
+    private static String getFirstResult(String question, List<String> baseUrls) {
         System.out.println(Runtime.getRuntime().freeMemory());
-        // get element as soon as it is available
-        Optional<String> result = engines.stream().parallel().map((base) -> {
+        AtomicReference<String> result = new AtomicReference<>();
+        for (String base : baseUrls) {
             String url = base + "?q=" + question;
-            return connect(url);
-        }).findAny();
-
+            new Thread(() -> {
+                result.compareAndSet(null, connect(url));
+            }).start();
+        }
         System.out.println(Runtime.getRuntime().freeMemory());
+        while (result.get() == null) ; // wait for some result to appear
         return result.get();
     }
 
