@@ -1,11 +1,12 @@
 package org.mrseasons.coffeetime.java.tdd;
 
 import org.junit.Test;
+import org.mrseasons.coffeetime.java.tdd.bean.Price;
+import org.mrseasons.coffeetime.java.tdd.bean.StubPrice;
+import org.mrseasons.coffeetime.java.tdd.bean.Ticket;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 /**
  * Created by mrseasons on 3/2/15.

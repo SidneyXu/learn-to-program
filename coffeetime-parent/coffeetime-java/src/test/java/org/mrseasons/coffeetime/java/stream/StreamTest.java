@@ -1,7 +1,5 @@
 package org.mrseasons.coffeetime.java.stream;
 
-import org.junit.Test;
-
 import java.util.*;
 import java.util.stream.Collectors;
 
