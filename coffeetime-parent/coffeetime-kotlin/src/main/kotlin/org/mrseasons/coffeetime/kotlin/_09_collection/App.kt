@@ -25,7 +25,7 @@ fun main(args: Array<String>) {
         it
     }.map {
         it.toUpperCase()
-    }.forEach { print("${it},") }
+    }.forEach { print("$it,") }
     println()   //  MARY,MIKE,
 
 }

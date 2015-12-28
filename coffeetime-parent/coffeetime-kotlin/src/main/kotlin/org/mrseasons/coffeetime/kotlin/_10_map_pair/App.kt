@@ -20,7 +20,7 @@ fun main(args: Array<String>) {
     //  access an not exist key would throw an exception
     //    println(mMap.get("e"))
     val x = if (mMap.containsKey("e")) mMap.get("e") else 0
-    println(mMap.getOrDefault("e", 10))
+    println(mMap.getOrElse("e", { 10 }))
 
     //  update elements
     mMap.put("d", 20)
@@ -34,7 +34,7 @@ fun main(args: Array<String>) {
 
     val keys = map.keySet()
     val values = map.values()
-    for (k in keys){
+    for (k in keys) {
 
     }
 
@@ -47,11 +47,11 @@ fun main(args: Array<String>) {
 }
 
 class Person(val name: String, val age: Int) {
-    fun component1(): String {
+    operator fun component1(): String {
         return name
     }
 
-    fun component2(): Int {
+    operator fun component2(): Int {
         return age
     }
 }
