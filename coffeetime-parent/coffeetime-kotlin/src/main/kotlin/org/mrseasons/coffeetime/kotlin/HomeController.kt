@@ -11,6 +11,6 @@ import javax.servlet.http.HttpServletResponse
 @WebServlet(name = "Hello", value = "/hello")
 public class HomeController : HttpServlet() {
     override fun doGet(req: HttpServletRequest?, resp: HttpServletResponse?) {
-        resp?.getWriter()?.write("Hello, World!")
+        resp?.writer?.write("Hello, World!")
     }
 }

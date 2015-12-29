@@ -19,7 +19,7 @@ fun main(args: Array<String>) {
     //  Closure
     var sum3 = 0
     val ints = intArrayOf(1, 2, 3)
-    ints filter { it > 0 } forEach {
+    ints.filter { it > 0 }.forEach {
         sum3 += it
     }
     println(sum3) //  6
@@ -27,12 +27,10 @@ fun main(args: Array<String>) {
     //  Extension Function Expressions
     val sum4 = fun Int.(other: Int): Int = this + other
     println(1.sum4(2))  //  3
-    1 sum4 2
-
 }
 
 //  Functions as Parameters
-fun lock<T>(lock: Lock, body: () -> T): T {
+fun <T> lock(lock: Lock, body: () -> T): T {
     lock.lock()
     try {
         return body()
@@ -44,7 +42,7 @@ fun lock<T>(lock: Lock, body: () -> T): T {
 fun add(f: (Int) -> Int) = f(10)
 
 //  Function Types
-fun max<T>(collection: Collection<T>, less: (T, T) -> Boolean): T? {
+fun  <T> max(collection: Collection<T>, less: (T, T) -> Boolean): T? {
     var max: T? = null
     for (it in collection)
         if (max == null || less(max, it))
@@ -53,8 +51,8 @@ fun max<T>(collection: Collection<T>, less: (T, T) -> Boolean): T? {
 }
 
 //  Inline Function
-inline fun inlineLock<T>(lock: Lock, body: () -> T,
-                         @noinline notInlined: () -> T): T {
+inline fun <T> inlineLock(lock: Lock, body: () -> T,
+                          noinline notInlined: () -> T): T {
     lock.lock()
     try {
         return body()

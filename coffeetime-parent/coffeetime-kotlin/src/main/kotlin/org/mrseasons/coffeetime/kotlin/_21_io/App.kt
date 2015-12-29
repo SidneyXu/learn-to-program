@@ -1,6 +1,5 @@
 package org.mrseasons.coffeetime.kotlin._21_io
 
-import java.io.Console
 import java.io.File
 
 /**

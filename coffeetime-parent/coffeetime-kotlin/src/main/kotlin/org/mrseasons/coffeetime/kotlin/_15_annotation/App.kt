@@ -9,6 +9,8 @@ fun main(args: Array<String>) {
 }
 
 //  Declare an annotation
+@Target(AnnotationTarget.EXPRESSION, AnnotationTarget.CLASS, AnnotationTarget.VALUE_PARAMETER, AnnotationTarget.FUNCTION,
+        AnnotationTarget.CONSTRUCTOR, AnnotationTarget.PROPERTY_SETTER)
 annotation class fancy
 
 //  Usage
@@ -20,8 +22,8 @@ annotation class fancy
     }
 }
 
-fancy class Foo2 {
-    fancy fun baz(fancy foo: Int): Int {
+@fancy class Foo2 {
+    @fancy fun baz(@fancy foo: Int): Int {
         @fancy fun bar() {
         }
         return (@fancy 1)
@@ -39,6 +41,6 @@ class Foo3 @fancy constructor() {
 //  Annotation with parameters
 annotation class special(val why: String)
 
-special("example") class Foo4
+@special("example") class Foo4
 
 
