@@ -1,6 +1,6 @@
 package org.mrseasons.coffeetime.java.tdd.dao;
 
-import org.mrseasons.coffeetime.java.tdd.User;
+import org.mrseasons.coffeetime.java.tdd.bean.User;
 
 /**
  * Created by mrseasons on 1/28/15.

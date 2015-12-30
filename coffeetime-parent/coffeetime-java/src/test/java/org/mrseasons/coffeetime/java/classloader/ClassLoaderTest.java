@@ -1,42 +1,36 @@
-//package org.mrseasons.coffeetime.java.classloader;
-//
-//import com.test.Member;
-//import junit.framework.TestCase;
-//import sun.rmi.rmic.iiop.ClassPathLoader;
-//import sun.tools.java.ClassPath;
-//
-//import java.net.MalformedURLException;
-//import java.net.URL;
-//import java.net.URLClassLoader;
-//
-///**
-// * Created by mrseasons on 3/4/15.
-// */
-//public class ClassLoaderTest extends TestCase {
-//
-//    public void test() {
-//        ClassLoader classLoader = ClassLoader.getSystemClassLoader();
-//        System.out.println(classLoader.getClass());
-//
-//        ClassLoader parent = classLoader.getParent();
-//        System.out.println(parent.getClass());
-//
-//        Class<Member> clazz = null;
-//        Class<Member> clazzParent = null;
-//
-//        new Member("a", 1);
-//
-//        try {
-//            clazz = (Class<Member>) parent.loadClass("org.mrseasons.coffeetime.java.tdd.Price");
-////           clazzParent= (Class<Member>) parent.loadClass("com.test.Member");
-//        } catch (ClassNotFoundException e) {
-//            e.printStackTrace();
-//        }
-//
-//        System.out.println(clazz);
-//        System.out.println(clazzParent);
-//
-//    }
+package org.mrseasons.coffeetime.java.classloader;
+
+import com.test.Member;
+import junit.framework.TestCase;
+
+/**
+ * Created by mrseasons on 3/4/15.
+ */
+public class ClassLoaderTest extends TestCase {
+
+    public void test1() {
+        ClassLoader classLoader = ClassLoader.getSystemClassLoader();
+        System.out.println(classLoader.getClass());
+
+        ClassLoader parent = classLoader.getParent();
+        System.out.println(parent.getClass());
+
+        Class<Member> clazz = null;
+        Class<Member> clazzParent = null;
+
+        new Member("a", 1);
+
+        try {
+            clazz = (Class<Member>) parent.loadClass("org.mrseasons.coffeetime.java.tdd.bean.Price");
+            clazzParent = (Class<Member>) parent.loadClass("com.test.Member");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(clazz);
+        System.out.println(clazzParent);
+
+    }
 //
 //    public void test2() throws Exception {
 //        URL[] urls = new URL[]{new URL("file:libs/test.jar")};
@@ -101,4 +95,4 @@
 //        System.out.println(loader2.getParent());
 //        subsub = subsub2;
 //    }
-//}
+}

@@ -25,7 +25,7 @@ public class ResourceTest {
     //after
     @Test
     public void testNewUseResource() {
-        NRes.withResource(res -> res.operate());
+        NRes.withResource(Res::operate);
     }
 
     //before
@@ -56,7 +56,7 @@ public class ResourceTest {
                 }
             }
             return  true;
-        }).forEach(n-> System.out.println(n));
+        }).forEach(System.out::println);
 
 
         //build under version 40

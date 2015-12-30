@@ -11,4 +11,4 @@ for (int i = 1; i < arr.length; i++) {
     int hexVal = Integer.parseInt(arr[i], 16);
     builder.append((char) hexVal)
 }
-System.out.println(builder.toString());
+println(builder.toString());
