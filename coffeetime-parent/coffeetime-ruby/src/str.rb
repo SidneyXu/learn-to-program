@@ -1,3 +1,5 @@
+# encoding=UTF-8
+
 name = "Tom"
 sex = "male"
 age = 18
@@ -22,3 +24,7 @@ With the three double-quotes.
 We'll be able to type as much as we like.
 Even 4 lines if we want, or 5, or 6.
 PARAGRAPH
+
+puts "abc"
+puts "你好"
+puts "你好"
