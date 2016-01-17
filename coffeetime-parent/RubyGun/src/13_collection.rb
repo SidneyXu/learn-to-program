@@ -42,3 +42,8 @@ puts (1..3).class
 (1..3).each { |i| print i }
 puts ''
 (1...3).each { |i| print i }
+puts ''
+
+('a'..'d').each { |c| print c }
+puts ''
+'a'.upto('d').each { |c| print c }

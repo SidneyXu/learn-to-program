@@ -13,6 +13,9 @@ for n in (1..3)
   puts "for-in #{n}"
 end
 
+# Times
+3.times { |i| puts "times #{i}" }
+
 
 # While
 ## 1
@@ -39,12 +42,25 @@ loop do
   print "loop #{i}"
   break if i > 5
 end
-
+puts ''
 
 # Until
 i = 6
-num = 3
+num = 9
 until i > num do
-  puts("Inside the loop i = #{i}")
+  puts "Inside the loop i = #{i}"
   i +=1
+end
+puts ''
+
+# Break and Continue
+for i in 1..5
+  break if i == 3
+  puts i
+end
+puts ''
+
+for i in 1..5
+  next if i == 3
+  puts i
 end

@@ -1,5 +1,7 @@
 # Define
 peter = {:name => 'Peter', :age => 18, 'height' => 180, 'nickname' => 'Pen'}
+jack = [:name, 'Jack', :age, 20, :height, 178]
+jane = {name: 'Jane', age: 16, height: 160}
 
 # Empty Map
 empty = {}
