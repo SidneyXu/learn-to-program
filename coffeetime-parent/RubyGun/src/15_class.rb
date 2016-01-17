@@ -17,7 +17,7 @@ class Person
   end
 
   def show
-    info = "name=#{name},age=#{age}"
+    info = "name=#{@name},age=#{@age}"
   end
 
 end
@@ -28,3 +28,5 @@ puts peter.set_age 10
 puts peter.name
 # puts peter.age
 puts peter.sex
+
+puts peter.show

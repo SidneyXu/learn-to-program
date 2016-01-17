@@ -9,6 +9,9 @@ def str2int(n)
     0
   rescue Exception
     100
+  ensure
+    puts 'finally'
+    300
   end
 end
 
@@ -16,4 +19,4 @@ puts str2int(10)  # 10
 puts str2int('10')  # 10
 puts str2int('1a0') # 0
 puts str2int('a10') # 0
-puts str2int('1')
+puts str2int('1') # 100
