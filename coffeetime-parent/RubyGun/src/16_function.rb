@@ -33,7 +33,20 @@ puts hello()
 puts hello
 puts "sum(1,2,3) is #{sum(1, 2, 3)}"
 puts dec(10, 3)
+puts dec 10, 3
 say('Peter')
 puts "add(1,2) is #{add(1, 2)}"
 x, y, z = triple(1, 2, 3)
 puts x, y, z
+
+# Named Parameters
+def add(a_number, another_number, options = {})
+  sum = a_number + another_number
+  sum = sum.abs if options[:absolute]
+  sum = sum.round(options[:precision]) if options[:round]
+  sum
+end
+
+puts add(1.0134, -5.568)
+puts add(1.0134, -5.568, absolute: true)
+puts add(1.0134, -5.568, absolute: true, round: true, precision: 2)
