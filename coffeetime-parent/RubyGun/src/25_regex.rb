@@ -1,30 +1,31 @@
-input = 'str'
+input = '99 bottles, 98 bottles'
+
+# Regex
 regex = /[0-9]+\W/
-pattern = ~regex
-matcher = input =~ pattern
+regex = Regexp.new('[0-9]+\W')
+regex = %r{[0-9]+\W}
 
-if "Hello" =~ ~/[A-Z][a-z]+/
-  puts 'OK'
-end
+# Matching
+puts input =~ regex # 0
 
-
-line1 = 'Cats are smarter than dogs'
-
-if line1 =~ /Cats(.*)/
-  puts 'Line1 starts with Cats'
-end
-
-line2 = 'hello'
-if line2 =~ /Hello/im
+line = 'hello'
+if line =~ /Hello/im
   puts 'ignores case'
 end
 
-# replace first
+# Searching
+result = /(\d{4})-(\d{2})/.match '2015-10'
+puts result.size # 3
+puts result # 2015-10
+result.captures.each { |m| puts "match: #{m}" }
+
+# Replacing
+## Replacing First
 phone = '2004-959-559 #This is Phone Number'
 phone = phone.sub!(/#.*$/, '')
 puts "Phone Num : #{phone}"
 
-# replace all
+## Replacing All
 puts 'abbc'.gsub(/a/, 'b') # bbbc
 puts 'abbc'.gsub!(/a/, 'b') # bbbc
 puts 'abbc'.gsub(/d/, 'a') # abbc
