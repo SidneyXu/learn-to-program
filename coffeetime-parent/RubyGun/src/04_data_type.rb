@@ -22,6 +22,7 @@ puts BigDecimal.new('2')-BigDecimal.new('1.8')
 
 # Type Conversion
 puts 10.to_s.class
+puts '1'.to_i.class
 
 # Type Inference
 if foo.is_a? String
