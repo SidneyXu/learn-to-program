@@ -29,3 +29,7 @@ peter.each { |k, v| puts "#{k} = #{v}" }
 # Exist
 puts peter.include? :name
 puts peter.include? :weight
+
+# Default Value
+hash = Hash.new('foo')
+puts hash['abc']

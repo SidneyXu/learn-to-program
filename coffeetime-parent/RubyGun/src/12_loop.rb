@@ -51,16 +51,38 @@ until i > num do
   puts "Inside the loop i = #{i}"
   i +=1
 end
+
+i = 0
+i += 1 until i > 5
+puts i
+
+begin
+  i -= 1
+end until i < 0
+puts i
+
 puts ''
 
 # Break and Continue
 for i in 1..5
   break if i == 3
-  puts i
+  puts "break #{i}"
 end
 puts ''
 
 for i in 1..5
   next if i == 3
-  puts i
+  puts "next #{i}"
+end
+puts ''
+
+# Redo
+i = 0
+while i < 3
+  puts "redo #{i}"
+  i+=1
+  if i == 2
+    i = 10
+    redo
+  end
 end
