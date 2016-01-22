@@ -23,6 +23,13 @@ puts !true # false
 puts (not (1==1)) # false
 puts 3 > 2 ? '3>2' : '3<=2' # 3>2
 
+## Specify Value
+favorite_book = nil
+puts favorite_book
+
+favorite_book ||= "Cat's Cradle"
+puts favorite_book
+
 ## Equals
 puts 1 == 1 # true
 puts 1 != 2 # true
@@ -41,9 +48,12 @@ puts foo.equal? foo_dup # false
 ### Comparator
 book_1 = 'A Wrinkle in Time'
 book_2 = 'A Brief History of Time'
-puts book_1 <=> book_2  # 1
+puts book_1 <=> book_2 # 1
 
 books = ['Charlie and the Chocolate Factory', 'War and Peace', 'Utopia', 'A Brief History of Time', 'A Wrinkle in Time']
 puts books.sort! { |firstBook, secondBook| firstBook <=> secondBook }
 
 
+## Define
+puts defined? foo # local-variable
+puts defined? puts  # method

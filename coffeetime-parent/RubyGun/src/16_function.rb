@@ -1,7 +1,12 @@
 # Define
 def hello
-  return "hello"
+  return 'hello'
 end
+
+# ! ?
+str = 'FooBar'
+puts str.downcase!
+puts str.include? 'foo'
 
 # Varargs
 def sum(*n)
