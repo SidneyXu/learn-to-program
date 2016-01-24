@@ -55,3 +55,7 @@ end
 puts add(1.0134, -5.568)
 puts add(1.0134, -5.568, absolute: true)
 puts add(1.0134, -5.568, absolute: true, round: true, precision: 2)
+
+# Check If Function Exist
+puts [1, 2, 3].respond_to?(:push) # true
+puts [1, 2, 3].respond_to?(:to_sym) # false

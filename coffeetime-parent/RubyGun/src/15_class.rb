@@ -50,3 +50,22 @@ Person.new('Jack')
 Foobar.new
 peter.print_counter
 puts "global variable is #{$global_variable}"
+
+
+# Class Object
+puts 1.class
+puts [].class
+puts 1.is_a?(Integer)
+
+# Class Function
+class Machine
+  def hello
+    puts 'hello member function'
+  end
+  def Machine.hello
+    puts 'hello class function'
+  end
+end
+m = Machine.new
+m.hello
+Machine.hello
