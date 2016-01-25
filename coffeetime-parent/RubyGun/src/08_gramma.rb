@@ -56,4 +56,24 @@ puts books.sort! { |firstBook, secondBook| firstBook <=> secondBook }
 
 ## Define
 puts defined? foo # local-variable
-puts defined? puts  # method
+puts defined? puts # method
+
+# BEGIN/END
+BEGIN {
+  puts 'setUp01'
+}
+BEGIN {
+  puts 'setUp02'
+}
+BEGIN {
+  puts 'setUp03'
+}
+END {
+  puts 'tearDown01'
+}
+END {
+  puts 'tearDown02'
+}
+END {
+  puts 'tearDown03'
+}
