@@ -62,10 +62,50 @@ class Machine
   def hello
     puts 'hello member function'
   end
+
   def Machine.hello
     puts 'hello class function'
+  end
+
+  def self.hello2
+    puts 'hello2 class function'
+  end
+
+  class << Machine
+    def hello3
+      puts 'hello3 class function'
+    end
+  end
+  class << self
+    def hello4
+      puts 'hello4 class function'
+    end
   end
 end
 m = Machine.new
 m.hello
 Machine.hello
+Machine.hello2
+Machine.hello3
+Machine.hello4
+
+# Single Function
+def m.singleMethod1
+  puts 't1 single method'
+end
+
+class << m
+  def singleMethod2
+    puts 't2 single method'
+  end
+end
+
+m.singleMethod1
+m.singleMethod2
+
+# Eigenclass
+eigenclass = class << m
+  self
+end
+puts eigenclass.class
+puts eigenclass.instance_methods.grep(/singleMethod./)
