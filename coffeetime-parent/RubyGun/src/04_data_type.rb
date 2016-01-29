@@ -15,6 +15,7 @@ puts true.class
 puts c.class
 puts foo.class
 puts [].class
+puts x.class.superclass
 
 # BigDecimal
 puts 2-1.8
