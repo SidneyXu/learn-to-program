@@ -36,3 +36,5 @@ puts button.desc(' =>')
 
 view_group = ViewGroup.new
 puts view_group.desc ' => '
+
+puts button.class.superclass

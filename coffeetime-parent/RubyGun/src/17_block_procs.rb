@@ -6,13 +6,29 @@ def cube
   yield(4)
 end
 
-def cube2(x, &f)
-  f.call(x)
+cube { |x| puts "x * 3 is #{x * 3}" }
+
+## implicit -> explicit
+def calculation(a, b, &block)
+  block.call(a, b)
 end
 
-cube { |x| puts "x * 3 is #{x * 3}" }
-cube2(4) { |x| puts "x * 4 is #{x * 4}" }
-puts "End Block\n\n"
+puts calculation(3, 4) { |a, b| a + b }
+
+## explicit -> implicit
+def calculation2(a, b)
+  yield(a, b)
+end
+
+add = lambda { |x, y| x + y }
+puts calculation2(3, 4, &add)
+
+def foo
+  yield if block_given?
+end
+
+foo { puts 'foobar' }
+foo
 
 # Proc
 cube = Proc.new { |x| x * 3 }
