@@ -109,3 +109,29 @@ eigenclass = class << m
 end
 puts eigenclass.class
 puts eigenclass.instance_methods.grep(/singleMethod./)
+
+# p
+class Item
+  def initialize(name)
+    @name = name
+  end
+
+  def inspect
+    'Result of inspect'
+  end
+end
+class ItemList
+  def initialize(name, items)
+    @name = name
+    @items = items
+  end
+end
+
+item = Item.new('item01')
+puts item
+puts item.to_s
+p item
+
+items = ItemList.new('itemlist', [item])
+puts items
+p items
