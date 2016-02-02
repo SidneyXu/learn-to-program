@@ -4,7 +4,8 @@ def str2int(n)
     if result == 1
       raise Exception.new('something wrong')
     end
-  rescue ArgumentError
+  rescue ArgumentError => error
+    puts error.backtrace
     0
   rescue Exception
     n = 67
