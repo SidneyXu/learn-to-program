@@ -69,3 +69,18 @@ Sample.c1
 
 samp.extend C
 samp.c1
+
+# Declare Class and Module like string
+dog = Module.new do
+  def speak
+    puts 'speak'
+  end
+end
+cat = Class.new do
+  def jump
+    puts 'jump'
+  end
+end
+kitty = cat.new
+kitty.extend(dog)
+kitty.speak
