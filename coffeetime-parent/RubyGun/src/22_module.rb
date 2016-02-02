@@ -9,7 +9,7 @@ puts StrUtils::COUNT
 # load './utils.rb'
 # StrUtils.echo
 
-# include
+# include and included
 include StrUtils
 # puts echo()
 sentents = ['z', 'b', 'e', 'p']
@@ -25,6 +25,10 @@ module A
   def a2
     puts 'a2'
   end
+
+  def self.included(base)
+    puts "A is included in #{base}"
+  end
 end
 module B
   def b1
@@ -38,6 +42,10 @@ end
 module C
   def c1
     puts 'c1'
+  end
+
+  def self.extended(base)
+    puts "A is extended in #{base}"
   end
 end
 
@@ -58,3 +66,6 @@ samp.b1
 samp.b2
 samp.s1
 Sample.c1
+
+samp.extend C
+samp.c1

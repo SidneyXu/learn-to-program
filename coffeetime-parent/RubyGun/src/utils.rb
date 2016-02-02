@@ -10,5 +10,6 @@ module StrUtils
   def self.echo
     puts "#{COUNT} #{::COUNT}"
   end
+
 end
 
