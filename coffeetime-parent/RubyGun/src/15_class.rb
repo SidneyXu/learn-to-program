@@ -103,6 +103,7 @@ end
 m.singleMethod1
 m.singleMethod2
 
+
 # Eigenclass
 eigenclass = class << m
   self
