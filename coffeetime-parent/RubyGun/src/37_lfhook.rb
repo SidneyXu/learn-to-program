@@ -63,3 +63,61 @@ puts d1.all_added_singleton_methods
 
 Dojo.remove_foo
 Dojo.undef_bar
+
+
+# Inclusion
+# Module Inclusion
+module SparringArea
+  @@included_into = []
+
+  def self.included_into
+    @@included_into
+  end
+
+  def self.included(class_or_module)
+    puts "class_or_module '#{class_or_module}' is included"
+    @@included_into << class_or_module
+  end
+end
+
+include SparringArea
+puts SparringArea.included_into
+
+# Object Extension
+class Dojo
+end
+
+module SparringArea
+  @@extended_objects = []
+
+  def self.extended_objects
+    @@extended_objects
+  end
+
+  def self.extended(object)
+    puts "object '#{object}' is extended"
+    @@extended_objects << object
+  end
+end
+
+dojo1 = Dojo.new
+dojo2 = Dojo.new
+dojo1.extend(SparringArea)
+dojo2.extend(SparringArea)
+
+# Inheritance
+class Room
+  @@subclasses = []
+
+  def self.subclasses
+    @@subclasses
+  end
+
+  def self.inherited(subclass)
+    puts "subclass '#{subclass}' inherits Room"
+    @@subclasses << subclass
+  end
+end
+class SmallRoom < Room
+end
+
