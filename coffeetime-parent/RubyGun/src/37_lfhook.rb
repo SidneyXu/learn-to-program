@@ -120,4 +120,3 @@ class Room
 end
 class SmallRoom < Room
 end
-
