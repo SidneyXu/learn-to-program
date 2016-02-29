@@ -1,3 +1,4 @@
+# Define
 foo = 'foo'
 Bar = 'bar'
 
@@ -6,6 +7,11 @@ Bar = 456
 
 puts foo
 puts Bar
+
+one = 1
+two = 2
+one, two = 2, 1
+puts one, two
 
 puts self
 puts __FILE__
