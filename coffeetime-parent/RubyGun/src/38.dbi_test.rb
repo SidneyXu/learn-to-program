@@ -1,14 +1,6 @@
 require 'test/unit'
 require 'dbi'
 
-=begin
-chmod go-w /Users/mrseasons/.nvm
-1. brew install mysql
-2. gem install dbi
-3. gem install mysql
-4. gem install dbd-mysql
-=end
-
 class DbiTest < Test::Unit::TestCase
 
   def setup
@@ -126,21 +118,16 @@ class DbiTest < Test::Unit::TestCase
 
   def test_autoclose_block
     DBI.connect("DBI:Mysql:#{@table}:#{@host}", @user, @psw) do |dbh|
-        puts 'connected'
-        dbh.execute('SELECT ID FROM EMPLOYEE') do |sth|
-          puts 'Databases: ' + sth.fetch_all.size.to_s
-        end
+      puts 'connected'
+      dbh.execute('SELECT ID FROM EMPLOYEE') do |sth|
+        puts 'Databases: ' + sth.fetch_all.size.to_s
+      end
 
-        dbh.prepare('SELECT ID FROM EMPLOYEE WHERE AGE > ?') do |sth|
-          sth.execute(20)
-          puts 'Databases: ' + sth.fetch_all.size.to_s
-        end
+      dbh.prepare('SELECT ID FROM EMPLOYEE WHERE AGE > ?') do |sth|
+        sth.execute(20)
+        puts 'Databases: ' + sth.fetch_all.size.to_s
+      end
     end
   end
 
-  # Fake test
-  def test_fail
-
-    fail('Not implemented')
-  end
 end
