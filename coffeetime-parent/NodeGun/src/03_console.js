@@ -3,12 +3,12 @@
  * <br>
  * Created by mrseasons on 16/3/2.
  */
-console.log('hello')
-console.error('404')
+console.log('hello');
+console.error('404');
 
 // Console Arguments
 var argv = process.argv;
-console.log(argv)
+console.log(argv);
 
-var args = argv.slice(2)
-console.log(args)
+var args = argv.slice(2);
+console.log(args);
