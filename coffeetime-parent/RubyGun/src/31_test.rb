@@ -7,4 +7,8 @@ class PersonTest < Test::Unit::TestCase
     peter.sex = 'male'
     assert_equal('male', peter.sex)
   end
+
+  def test01
+    puts 'foobar'
+  end
 end
