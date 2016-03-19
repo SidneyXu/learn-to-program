@@ -6,6 +6,7 @@
     "cookie-parser": "latest",
     "express": "latest",
     "mongodb": "^2.1.7",
-    "multer": "latest"
+    "multer": "latest",
+    "gulp": "latest"
   }
 }
