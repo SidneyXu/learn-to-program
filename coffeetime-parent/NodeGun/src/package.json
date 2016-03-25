@@ -2,9 +2,11 @@
   "name": "application-name",
   "version": "0.0.1",
   "dependencies": {
-    "express": "latest",
-    "cookie-parser": "latest",
     "body-parser": "latest",
-    "multer": "latest"
+    "cookie-parser": "latest",
+    "express": "latest",
+    "mongodb": "^2.1.7",
+    "multer": "latest",
+    "gulp": "latest"
   }
 }
