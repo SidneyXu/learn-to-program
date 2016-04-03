@@ -1,6 +1,8 @@
 /**
  * Created by mrseasons on 16/3/30.
  */
+'use strict';
+
 var [a, b, c] = [1, 2, 3];
 let [head, ...tail] = [1, 2, 3, 4];
 var { bar, foo } = {foo: "aaa", bar: "bbb"};
