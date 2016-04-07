@@ -11,3 +11,6 @@ one = 1
 two = 2
 one, two = 2, 1
 print(one, two)
+
+del one
+print(one)
