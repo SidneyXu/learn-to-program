@@ -10,3 +10,7 @@ elif x < y:
 else:
     print('x == y')
 print('end')
+
+# Conditional
+min = x if x < 5 else 5
+print(min)

@@ -14,3 +14,8 @@ print(one, two)
 
 del one
 print(one)
+
+# Random
+import random
+
+print('random', random.randint(1, 10))

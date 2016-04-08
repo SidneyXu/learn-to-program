@@ -9,8 +9,8 @@ nums.each do |n|
   puts "each #{n}"
 end
 
-for n in (1..3)
-  puts "for-in #{n}"
+for n in (1..10).step(3)
+  puts "for-range #{n}" # 1 4 7 10
 end
 
 # Times
