@@ -14,6 +14,9 @@ x += 1
 # x++ not support
 puts x # 11
 
+puts(2 ** 3) # 8
+puts(9 / 3) # 3
+
 ## Logic
 puts true and 1 == 2 # true
 puts true && 1 == 2 # false

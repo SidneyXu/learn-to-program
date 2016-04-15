@@ -17,3 +17,7 @@ for (let i in colors) {
 for (let v of colors) {
     console.log(v); // red green blue
 }
+
+Object.keys(colors).forEach(function (key) {
+    console.log(key);
+});

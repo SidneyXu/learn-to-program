@@ -8,6 +8,7 @@ var set = new Set();
 
 set = new Set([1, 2, 3, 4, 4]);
 console.log([...set]);  //  [ 1, 2, 3, 4 ]
+console.log([10, 20, 30, ...set]);  //  [ 10, 20, 30, 1, 2, 3, 4 ]
 
 set.add(10);
 set.delete(3);
