@@ -20,6 +20,16 @@ file.close()
 file = open('test.txt', 'r')
 print('read:', file.read())
 
+# Try-Resource
+try:
+    with open('test.txt', 'r') as f:
+        for line in f:
+            print(line)
+except OSError:
+    print('OSError occurs')
+else:
+    print('end read')
+
 # Current Position
 print(file.tell())
 

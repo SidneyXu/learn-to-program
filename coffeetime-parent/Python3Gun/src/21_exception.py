@@ -9,6 +9,8 @@ def str2int(n):
     except Exception as error:
         print('exception: ', error)
         return 67
+    else:
+        print('no exception')
     finally:
         print('finally')
         return 300

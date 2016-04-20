@@ -15,6 +15,8 @@ i = 0
 while i < 3:
     print('while', str(i))
     i += 1
+else:
+    print('end while', str(i))
 print()
 
 # Break and Pass
