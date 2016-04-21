@@ -59,3 +59,17 @@ def declare5():
 
 declare5()
 print(num)  # 5
+
+
+# Static Method / Class Method
+class StrUtils:
+    @staticmethod
+    def sort_words(words):
+        return sorted(words)
+
+    @classmethod
+    def cout(cls):
+        print(cls)
+
+
+print(StrUtils.sort_words([3, 2, 1]))
