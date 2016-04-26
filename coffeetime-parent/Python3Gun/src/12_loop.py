@@ -30,3 +30,9 @@ for i in range(1, 5):
     if i == 3:
         pass
     print('next', str(i))
+
+a = [i for i in range(100) if not (i % 2) and i % 3]
+print(a)
+
+b = {i: i % 2 == 0 for i in range(10)}
+print(b)

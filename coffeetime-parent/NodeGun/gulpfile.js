@@ -7,8 +7,6 @@ var mocha = require('gulp-mocha');
 var browserify = require('gulp-browserify');
 var uglify = require('gulp-uglify');
 
-
-
 const es6 = {
     src: 'es6/*.js',
     dest: 'es5_dir'
