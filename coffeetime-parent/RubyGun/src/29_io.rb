@@ -16,6 +16,7 @@ file.print("world\n")
 file.puts('bye')
 file.close
 
+# Try-Resource
 File.open('test.txt', 'r') do |file|
   puts "read: #{file.read}"
 end

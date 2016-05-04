@@ -19,3 +19,9 @@ print(True or 1 == 2)  # True
 print(not (True))  # False
 print(not (1 == 1))  # False
 print(3 < 4 < 5)
+
+# Random
+import random
+
+secret = random.randint(1, 10)
+print(secret)
