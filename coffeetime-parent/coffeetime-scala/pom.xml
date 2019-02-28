@@ -15,6 +15,7 @@
 	<properties>
 		<scala.version>2.11.5</scala.version>
 		<scala.version.tools>2.11</scala.version.tools>
+		<akka-actor.version>2.4.17</akka-actor.version>
 	</properties>
 
 	<build>
@@ -66,17 +67,17 @@
 		<dependency>
 			<groupId>com.typesafe.akka</groupId>
 			<artifactId>akka-actor_2.11</artifactId>
-			<version>2.3.9</version>
+			<version>${akka-actor.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.typesafe.akka</groupId>
 			<artifactId>akka-actor-tests_2.11</artifactId>
-			<version>2.3.9</version>
+			<version>${akka-actor.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.typesafe.akka</groupId>
 			<artifactId>akka-remote_2.11</artifactId>
-			<version>2.3.9</version>
+			<version>${akka-actor.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.scala-lang</groupId>
